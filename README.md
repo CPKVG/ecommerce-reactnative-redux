@@ -14,4 +14,8 @@ Nuke gradlew
     `./gradlew clean`
 
 
-
+Installation
+    `npm i json-server`
+    `npm install react-redux`
+    `npm install redux`
+    `npm i redux-thunk`
