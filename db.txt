@@ -6,7 +6,7 @@
             "price":"5.99",
             "description":"Keeps you warm",
             "stock":"10",
-            "image":"White_t-shirt",
+            "image":"require('./../../../assests/img/White_t-shirt.png')",
             "category":"Apparel"
           },{
             "id":"1",
@@ -14,7 +14,7 @@
             "price":"4.99",
             "description":"Keeps you warm",
             "stock":"5",
-            "image":"Black_t-shirt",
+            "image":"require(./../../../assests/img/Black_t-shirt.png)'",
             "category":"Apparel"
           },{
             "id":"2",
@@ -22,7 +22,7 @@
             "price":"1900.99",
             "description":"Graphics card",
             "stock":"0",
-            "image":"RTX3080",
+            "image":"require('./../../../assests/img/RTX3080.png)'",
             "category":"Electronics"
           },{
             "id":"3",
@@ -30,7 +30,7 @@
             "price":"560.99",
             "description":"Portable personal computer",
             "stock":"10",
-            "image":"Laptop",
+            "image":"require('./../../../assests/img/Laptop.png')",
             "category":"Electronics"
           },{
             "id":"4",
@@ -38,7 +38,7 @@
             "price":"3.99",
             "description":"",
             "stock":"25",
-            "image":"Potatos",
+            "image":"require('./../../../assests/img/Potatos.png')",
             "category":"Food"
           },{
             "id":"5",
@@ -46,7 +46,7 @@
             "price":"1.99",
             "description":"Beans traped in a tin can",
             "stock":"20",
-            "image":"Watties_Beanz",
+            "image":"require('./../../../assests/img/Watties_Beanz.png')",
             "category":"Food"
           },{
             "id":"6",
@@ -54,7 +54,7 @@
             "price":"460,000",
             "description":"Soviet Main battle tank during WW2",
             "stock":"8000",
-            "image":"T34-85",
+            "image":"require('./../../../assests/img/T34-85.png')",
             "category":"Soviet Tanks"
           },{
             "id":"7",
@@ -62,7 +62,7 @@
             "price":"???",
             "description":"Soviet Heavy tank during WW2",
             "stock":"210",
-            "image":"Kv1",
+            "image":"require('./../../../assests/img/Kv1.png')",
             "category":"Soviet Tanks"       
           }]
 }

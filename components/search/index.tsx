@@ -1,36 +1,41 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { useDispatch, useSelector } from 'react-redux';
+import { fetchProducts } from '../../redux/Product/product.action';
 
 
 const Search = () => {
 
-
-    const dispatch = useDispatch();
- 
     const [text, onChangeText] = React.useState('');
+    const dispatch = useDispatch();
+    
 
-    const onSubmit = () => {
-        // dispatch(text)
-        console.log("btn pressed")
-    }
+    // const onSubmit = () => {
+    //     // dispatch(text)
 
+    //     dispatch(fetchProducts(text))
+    // }
 
+    useEffect(() => {
+        dispatch(fetchProducts(text))
+        console.log(text)
+      }, [text])
 
     return (
         <View style ={styles.container}>
             <TextInput
                 style={styles.input}
-                onChangeText={onChangeText}
+                //onChangeText={onChangeText}
+                onChangeText={text => onChangeText(text)}
                 value={text}
                 placeholder = "Search Products"
             />
-            <TouchableOpacity
+            {/* <TouchableOpacity
                 style={styles.button}
                 onPress={onSubmit}
             > 
             <Text  style={styles.btnText}>Search</Text>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
         </View>
     )
 }
