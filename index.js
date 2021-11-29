@@ -13,7 +13,7 @@
  
  
  const RNRedux = () => (
-     <Provider store = { store }>
+     <Provider store = { store }>    
        <App />
      </Provider>
    )

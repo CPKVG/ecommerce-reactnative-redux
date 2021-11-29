@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Button, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchProducts } from '../../redux/Product/product.action';
+import { fetchProductSearch } from '../../redux/Product/product.action';
 
 
 const Search = () => {
@@ -11,14 +11,16 @@ const Search = () => {
     
 
     // const onSubmit = () => {
-    //     // dispatch(text)
+    //     //     // dispatch(text)
+    //     console.log("submitted")
+    // //     dispatch(fetchProducts(text))
+    //  }
 
-    //     dispatch(fetchProducts(text))
-    // }
+
 
     useEffect(() => {
-        dispatch(fetchProducts(text))
-        console.log(text)
+        dispatch(fetchProductSearch(text))
+        //console.log(text)
       }, [text])
 
     return (
@@ -27,7 +29,7 @@ const Search = () => {
                 style={styles.input}
                 //onChangeText={onChangeText}
                 onChangeText={text => onChangeText(text)}
-                value={text}
+                value={text}    
                 placeholder = "Search Products"
             />
             {/* <TouchableOpacity

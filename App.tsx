@@ -5,6 +5,7 @@ import {
   ScrollView,
   StatusBar,
   StyleSheet,
+  Switch,
   Text,
   useColorScheme,
   View,
@@ -23,18 +24,30 @@ import HomePage from './pages/homepage';
 import Header from './components/header';
 import Search from './components/search';
 import ProductResult from './components/product/productResult';
+import ProductPage from './pages/productpage';
+import { Link, NativeRouter, Route, Routes } from 'react-router-native';
+import HomePageLayout from './layouts/HomePageLayout';
 
 
+//const Home = () => <Text >Home</Text>;
 
 const App = () => {
 
   return(
-    <View style ={styles.container}>
-      <Search/>
-      <ProductResult/>  
-      <Header title="FooCommerce" />
-      <HomePage/>
-    </View>
+
+    <NativeRouter>
+      <Routes>
+        
+          <Route path = "/" element = {
+                  <HomePageLayout>
+                    <HomePage/>
+                  </HomePageLayout>
+                }/>
+          <Route path = "/product" element = {<ProductPage/>}/>
+        </Routes>
+    </NativeRouter>
+
+
   )
   };
 
@@ -42,7 +55,11 @@ const styles = StyleSheet.create({
   container: {
     // flex: 1
     ...StyleSheet.absoluteFillObject
+  },
+  navItem:{
+
   }
+
 });
 
 

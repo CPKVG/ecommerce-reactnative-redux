@@ -1,5 +1,8 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
+import { Link } from 'react-router-native'
+
+
 
 interface Props {
     title: string;
@@ -9,10 +12,18 @@ interface Props {
 const Header = (props: Props) => {
     return (
       <View style={styles.header}>
+        <Link to = "/"> 
         <Text style={styles.headerText}>{props.title}</Text>
+        </Link>
       </View>
     );
   };
+
+// const Header = () => {
+//   return(
+//     {}
+//   )
+// }
 
 
   const styles = StyleSheet.create({

@@ -4,18 +4,23 @@ const INITIAL_STATE  = {
     product: '',
     loading:true,
     productData:'',
-
+    productDataSearch:'',
     };
 
 
 const productReducer = (state = INITIAL_STATE, action:any) => {
     switch(action.type) {
-        case productTypes.FETCHPRODUCTS:
+        case productTypes.FETCHPRODUCT:
             return {
             ...state,
             productData:action.payload
             }
-        case productTypes.FETCHPRODUCTS_ERR:
+        case productTypes.FETCHPRODUCTSEARCH:
+            return{
+            ...state,
+            productDataSearch:action.payload
+            }
+        case productTypes.FETCHPRODUCT_ERR:
             return {
             loading: false,
             err:action.payload

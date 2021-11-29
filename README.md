@@ -18,8 +18,15 @@ make sure its dead
 
 Installation
     `https://reactnative.dev/docs/environment-setup`
-depandancies 
+dependencies
     `npm install -g json-server`
     `npm i react-redux`
     `npm i redux`
     `npm i redux-thunk`
+    `npm i react-router-native`
+
+
+TO DO LIST
+    1) Homepage category selection
+    2) Product add cart
+    3) 

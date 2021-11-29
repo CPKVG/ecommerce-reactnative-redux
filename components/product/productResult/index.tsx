@@ -1,22 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchProducts } from './../../../redux/Product/product.action'
+import { fetchProductSearch } from './../../../redux/Product/product.action'
 //search + fetch search results 
 
 import { Button, FlatList, Image, StyleSheet, Text, View } from 'react-native';
 import { RootState } from '../../../redux/rootReducer';
+import  ProductImage  from '../productImage';
+
 
 
 const ProductResult = () =>{
 
-    const dispatch = useDispatch(); 
+    //const dispatch = useDispatch(); 
 
     //return value from redux actions    
     const productSelector:any = useSelector((state: RootState) => state.product)
-
-    let productData = productSelector.productData
+    console.log(productSelector)
+    let productDataSearch = productSelector.productDataSearch
+    //console.log(productDataSearch,"productDataSearch")
     //console.log(productData,"productData")
-    const productName: any[] = [] 
+    //const productName: any[] = [] 
 
     
     // useEffect(() => {
@@ -24,44 +27,43 @@ const ProductResult = () =>{
     // }, [])
 
 
-    const rootRoute = "./../../../"
+    
+
+    //const rootRoute = "./../../../"
 
 
-    const getImage = (image:any) => {
+    // const getImage = (image:any) => {
 
-      switch(image){
-        case "White_t-shirt":
-          return require(`${rootRoute}assests/img/White_t-shirt.png`)
-          break;
-        case "Black_t-shirt":
-          return require(`${rootRoute}assests/img/Black_t-shirt.png`)
-          break;
-        case "RTX3080":
-          return require(`${rootRoute}assests/img/RTX3080.png`)
-          break;
-        case "Laptop":
-          return require(`${rootRoute}assests/img/Laptop.png`)
-          break;
-        case "Potatos":
-          return require(`${rootRoute}assests/img/Potatos.png`) 
-          break;
-        case "Watties_Beanz":
-          return require(`${rootRoute}assests/img/Watties_Beanz.png`)
-          break;
-        case "T34-85":
-          return require(`${rootRoute}assests/img/T34-85.png`)
-          break;
-        case "Kv1":
-          return require(`${rootRoute}assests/img/Kv1.png`)
-          break;
-        // default:
-        //   return require("") // add image not found 
-        //   break;
-      }
-
-      
-
-    }
+    //   switch(image){
+    //     case "White_t-shirt":
+    //       return require(`${rootRoute}assests/img/White_t-shirt.png`)
+    //       break;
+    //     case "Black_t-shirt":
+    //       return require(`${rootRoute}assests/img/Black_t-shirt.png`)
+    //       break;
+    //     case "RTX3080":
+    //       return require(`${rootRoute}assests/img/RTX3080.png`)
+    //       break;
+    //     case "Laptop":
+    //       return require(`${rootRoute}assests/img/Laptop.png`)
+    //       break;
+    //     case "Potatos":
+    //       return require(`${rootRoute}assests/img/Potatos.png`) 
+    //       break;
+    //     case "Watties_Beanz":
+    //       return require(`${rootRoute}assests/img/Watties_Beanz.png`)
+    //       break;
+    //     case "T34-85":
+    //       return require(`${rootRoute}assests/img/T34-85.png`)
+    //       break;
+    //     case "Kv1":
+    //       return require(`${rootRoute}assests/img/Kv1.png`)
+    //       break;
+    //     // default:
+    //     //   return require("") // add image not found 
+    //     //   break;
+    //   }
+//}
 
 
 
@@ -69,11 +71,11 @@ const ProductResult = () =>{
 
       
       return(
-        
+        //<ProductImage/>
         <View style={styles.container}>
           <Image 
             style = {styles.image}
-            source = {getImage(item.image)}
+            source = {ProductImage(item.image)}
           />
           <Text style = {styles.title}>
             {item.title}
@@ -89,7 +91,7 @@ const ProductResult = () =>{
     return(
     <View style={{ marginVertical: '5%' }}>
       <FlatList  
-      data={productData}
+      data={productDataSearch}
       numColumns ={2}
       ItemSeparatorComponent={
           () => <View style={{ width: 16 }}/>
