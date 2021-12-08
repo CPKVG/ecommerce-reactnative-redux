@@ -21,9 +21,13 @@ Installation
 dependencies
     `npm install -g json-server`
     `npm i react-redux`
+    Redux
     `npm i redux`
     `npm i redux-thunk`
-    `npm i react-router-native`
+    React-Native-Navigator v6 `https://reactnavigation.org/docs/getting-started`
+    `npm i @react-navigation/native`
+    `npm install react-native-screens react-native-safe-area-context`
+    `npm install @react-navigation/native-stack`
 
 
 TO DO LIST

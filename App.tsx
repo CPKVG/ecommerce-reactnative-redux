@@ -25,27 +25,72 @@ import Header from './components/header';
 import Search from './components/search';
 import ProductResult from './components/product/productResult';
 import ProductPage from './pages/productpage';
-import { Link, NativeRouter, Route, Routes } from 'react-router-native';
 import HomePageLayout from './layouts/HomePageLayout';
+import { NavigationContainer } from '@react-navigation/native';
+//import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { navigationRef } from './RootNavigation';
+
 
 
 //const Home = () => <Text >Home</Text>;
 
+const Stack = createNativeStackNavigator();
+
+// const Search = React.createContext({})
+
+
+const HomeScreen = () => {
+  
+  return(
+    <HomePageLayout>
+      {/* <Search/> */}
+      <HomePage/>
+      {/* <ProductPage/> */}
+    </HomePageLayout>
+  )
+}
+
+const ProductScreen = () => {
+  return(
+    <HomePageLayout>
+      {/* <Search/> */}
+      <ProductPage/>
+    </HomePageLayout>
+  )
+}
+
+
 const App = () => {
 
   return(
-
-    <NativeRouter>
-      <Routes>
+    //<View>
+    <>
+    
+    <NavigationContainer ref={navigationRef}>
+      
+      <Stack.Navigator
+        screenOptions={{
+          //headerShown: false
+          // header:() => (
+          //   <Search/>
+          // )
+        }}>
+          
         
-          <Route path = "/" element = {
-                  <HomePageLayout>
-                    <HomePage/>
-                  </HomePageLayout>
-                }/>
-          <Route path = "/product" element = {<ProductPage/>}/>
-        </Routes>
-    </NativeRouter>
+        <Stack.Screen name="Home" component={HomeScreen} 
+          options= {{
+            header:() => (
+              <Search/>
+            )
+          }}
+        />
+        {/* <Stack.Screen name="Products" component={ProductScreen} 
+        /> */}
+
+      </Stack.Navigator>
+    </NavigationContainer>
+</>
 
 
   )

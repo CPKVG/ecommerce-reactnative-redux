@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { FlatList, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchProduct, fetchProductSearch } from '../../../redux/Product/product.action'
+import { fetchCategory, fetchProduct, fetchProductSearch } from '../../../redux/Product/product.action'
 import { RootState } from '../../../redux/rootReducer'
 import  ProductImage  from '../productImage';
 
@@ -29,82 +29,55 @@ const Item = ({ item, onPress, backgroundColor, textColor }:any) => (
 //home page category selections
 const ProductCategory = () =>{
 
-    const [selectedCategory, setSelectedCategory] = useState("");
 
-
-    console.log(selectedCategory)
-   // console.log(selectedCategory)
-
-    useEffect(() => {
-        dispatch(fetchProductSearch(selectedCategory))
-    },[selectedCategory])
-
-    const dispatch = useDispatch();
-    useEffect(() => {
-        dispatch(fetchProduct())
-    }, [])
-
-
+    
     const productSelector:any = useSelector((state: RootState) => state.product)
     //console.log(productSelector.productData,"productselector")
 
+
+
     const productData = productSelector.productData
-    let data:any = ""
-    if(productData !== undefined && productData !== ""){
-        data = productData.filter((val:any,id:any) => id == productData.findIndex((elem:any)=> elem.category == val.category))
-        
+    const productDataSearch = productSelector.productDataSearch
+    const productCategorySelect = productSelector.productCategorySelect
+   //triggers when user selects a category 
+   const dispatch = useDispatch();
+
+    const selectedCategory = (value:string) => {
+        dispatch(fetchProductSearch(value))
+        dispatch(fetchCategory(value))
     }
- 
-
-    // const displayProductCategory = (item:any) =>{
-    //     //dispatch search input = item.category
-    //     dispatch(fetchProductSearch(item))        
-    // }   
-
-    
-    // const displayCategory = (item:any) => {
-    //     <TouchableOpacity 
-    //     onPress={() => displayProductCategory(item.category)} 
-    //     style={styles.container}
-    //     >
-
-    //       <Image    
-    //         style = {styles.image}
-    //         source = {ProductImage(item.image)}
-    //       />
-    //       <Text style = {styles.category}>
-    //         {/* {item.category} */}
-    //         {item.category}
-    //       </Text>
-    //     </TouchableOpacity>
-    // }
-
-    
 
 
+    //fetches category for display, 
+    useEffect(() => {
+        dispatch(fetchProduct())
+        
+    }, [])
 
+
+    let data:any = ""
+    //filters category and first image of that category
+    if(productData !== undefined && productData !== ""){
+        data = productData.filter((val:any,id:number) => id == productData.findIndex((elem:any)=> elem.category == val.category))
+    }
 
     const renderItem = ({item,backgroundColor,color}:any)=>{
 
-    //const item = selectedCategory ? item = "" : item = item
-    //const data = selectedCategory ?  dispatch(fetchProductSearch(item)) : item
         
         return (
              <Item
                 item={item}
-                onPress={() => setSelectedCategory(item.category)}
+                onPress={() => selectedCategory(item.category)}
                 backgroundColor={{ backgroundColor }}
                 textColor={{ color }}
             />
  
         )
     
-    }
-
-
+    }   
 
     return (
-        selectedCategory ? null :
+        productCategorySelect !== "" || productDataSearch !== "" ? null :
         <View>
             <FlatList 
             data = {data}

@@ -4,26 +4,38 @@ const INITIAL_STATE  = {
     product: '',
     loading:true,
     productData:'',
-    productDataSearch:'',
+    productDataSearch:undefined,
+    productCategorySelect:"",
+    // categoryBool:false
     };
-
 
 const productReducer = (state = INITIAL_STATE, action:any) => {
     switch(action.type) {
-        case productTypes.FETCHPRODUCT:
+        case productTypes.FETCH_PRODUCT:
             return {
             ...state,
             productData:action.payload
             }
-        case productTypes.FETCHPRODUCTSEARCH:
+        case productTypes.FETCH_PRODUCT_SEARCH:
             return{
             ...state,
-            productDataSearch:action.payload
+            productDataSearch:action.payload,
+            //categoryBool:action.categoryBool
             }
-        case productTypes.FETCHPRODUCT_ERR:
+        case productTypes.FETCH_PRODUCT_ERR:
             return {
             loading: false,
             err:action.payload
+            }
+        case productTypes.SET_CATEGORY:
+            return{
+            ...state,
+            productCategorySelect:action.payload
+            }
+        case productTypes.SET_CATEGORY_ERR:
+            return{
+                loading:false,
+                err:action.payload
             }
         default:
     return state;

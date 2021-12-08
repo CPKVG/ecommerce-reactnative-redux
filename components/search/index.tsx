@@ -1,37 +1,42 @@
 import React, { useEffect, useState } from 'react'
 import { Button, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchProductSearch } from '../../redux/Product/product.action';
+import ProductPage from '../../pages/productpage';
+import { fetchCategory, fetchProductSearch } from '../../redux/Product/product.action';
+import { RootState } from '../../redux/rootReducer';
+import * as RootNavigation from '../../RootNavigation'
+
 
 
 const Search = () => {
-
-    const [text, onChangeText] = React.useState('');
     const dispatch = useDispatch();
-    
-
-    // const onSubmit = () => {
-    //     //     // dispatch(text)
-    //     console.log("submitted")
-    // //     dispatch(fetchProducts(text))
-    //  }
 
 
+    const productSelector:any = useSelector((state: RootState) => state.product)
+
+    const productCategorySelect = productSelector.productCategorySelect
+
+    let [text, onChangeText] = useState<string | undefined>(undefined);
 
     useEffect(() => {
         dispatch(fetchProductSearch(text))
-        //console.log(text)
+        dispatch(fetchCategory(""))
       }, [text])
-
+    
     return (
         <View style ={styles.container}>
             <TextInput
                 style={styles.input}
-                //onChangeText={onChangeText}
-                onChangeText={text => onChangeText(text)}
+                onChangeText={(text:string | undefined) =>{
+                    typeof text == "string" ? (text.length == 0 ? text = undefined : text) : null
+                    onChangeText(text)
+                }}
+                defaultValue = {text == undefined ? productCategorySelect : console.log("i am not undefined")}
                 value={text}    
                 placeholder = "Search Products"
             />
+
+
             {/* <TouchableOpacity
                 style={styles.button}
                 onPress={onSubmit}

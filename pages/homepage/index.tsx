@@ -3,15 +3,15 @@ import { StyleSheet, Text, View } from 'react-native';
 import  ProductCategory  from '../../components/product/productCategory';
 import ProductResult from '../../components/product/productResult';
 import HomePageLayout from '../../layouts/HomePageLayout';
+import ProductPage from '../productpage';
 
 
 const HomePage = () =>{
     
     return(
         <View style ={styles.container}>
-            {/* <HomePageLayout > */}
                 <ProductCategory />
-            {/* </HomePageLayout> */}
+                <ProductPage/>
         </View>
         
     )

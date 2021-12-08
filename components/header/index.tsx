@@ -1,6 +1,5 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
-import { Link } from 'react-router-native'
 
 
 
@@ -12,9 +11,7 @@ interface Props {
 const Header = (props: Props) => {
     return (
       <View style={styles.header}>
-        <Link to = "/"> 
         <Text style={styles.headerText}>{props.title}</Text>
-        </Link>
       </View>
     );
   };
