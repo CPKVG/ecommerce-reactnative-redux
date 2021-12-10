@@ -35,7 +35,13 @@ import { navigationRef } from './RootNavigation';
 
 //const Home = () => <Text >Home</Text>;
 
-const Stack = createNativeStackNavigator();
+
+export type RootStackParamList = {
+  Home: undefined;
+  Product: undefined;
+};
+
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 // const Search = React.createContext({})
 
@@ -59,6 +65,8 @@ const ProductScreen = () => {
     </HomePageLayout>
   )
 }
+
+
 
 
 const App = () => {
@@ -85,8 +93,8 @@ const App = () => {
             )
           }}
         />
-        {/* <Stack.Screen name="Products" component={ProductScreen} 
-        /> */}
+        <Stack.Screen name="Product" component={ProductScreen}
+        />
 
       </Stack.Navigator>
     </NavigationContainer>

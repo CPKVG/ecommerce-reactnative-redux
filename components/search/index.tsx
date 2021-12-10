@@ -15,7 +15,6 @@ const Search = () => {
     const productSelector:any = useSelector((state: RootState) => state.product)
 
     const productCategorySelect = productSelector.productCategorySelect
-
     let [text, onChangeText] = useState<string | undefined>(undefined);
 
     useEffect(() => {
@@ -31,7 +30,7 @@ const Search = () => {
                     typeof text == "string" ? (text.length == 0 ? text = undefined : text) : null
                     onChangeText(text)
                 }}
-                defaultValue = {text == undefined ? productCategorySelect : console.log("i am not undefined")}
+                defaultValue = {text !== "" ? productCategorySelect : console.log("text = empty")}
                 value={text}    
                 placeholder = "Search Products"
             />

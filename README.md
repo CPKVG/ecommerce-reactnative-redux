@@ -27,10 +27,23 @@ dependencies
     React-Native-Navigator v6 `https://reactnavigation.org/docs/getting-started`
     `npm i @react-navigation/native`
     `npm install react-native-screens react-native-safe-area-context`
+    <!-- `npm install @react-navigation/stack` -->
     `npm install @react-navigation/native-stack`
+    
+
+    snap Carousel 
+    `npm install react-native-snap-carousel`
 
 
 TO DO LIST
-    1) Homepage category selection
-    2) Product add cart
-    3) 
+    1) Homepage category selection (X)
+    2) Carousel category (X)
+    3) Product add cart 
+    4) product detail page -> page navigation (x)
+    5) Cart page 
+    6) Login + logout
+
+Features 
+    1) Dynamic search filter
+    2) Responsive category select + initgrated with search function 
+    3) page navigation

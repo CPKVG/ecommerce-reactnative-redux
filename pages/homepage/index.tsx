@@ -11,7 +11,7 @@ const HomePage = () =>{
     return(
         <View style ={styles.container}>
                 <ProductCategory />
-                <ProductPage/>
+                <ProductResult/>
         </View>
         
     )

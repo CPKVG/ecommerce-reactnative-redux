@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { fetchCategory, fetchProduct, fetchProductSearch } from '../../../redux/Product/product.action'
 import { RootState } from '../../../redux/rootReducer'
 import  ProductImage  from '../productImage';
-
+import  Carousel from 'react-native-snap-carousel';
 
 
 
@@ -55,10 +55,11 @@ const ProductCategory = () =>{
     }, [])
 
 
-    let data:any = ""
+    let data:Array<String> = []
     //filters category and first image of that category
     if(productData !== undefined && productData !== ""){
         data = productData.filter((val:any,id:number) => id == productData.findIndex((elem:any)=> elem.category == val.category))
+        // console.log(data)
     }
 
     const renderItem = ({item,backgroundColor,color}:any)=>{
@@ -79,10 +80,18 @@ const ProductCategory = () =>{
     return (
         productCategorySelect !== "" || productDataSearch !== "" ? null :
         <View>
-            <FlatList 
+            <Carousel 
+            // layout={"default"}
             data = {data}
-            horizontal = {true}
+            // horizontal = {true}
             renderItem = {renderItem}
+            sliderWidth={400}
+            itemWidth={125}
+            loop={true}
+            autoplay={true}
+            autoplayDelay={25000}
+            autoplayInterval={2500}
+
             />
         </View>
     //     <View style={{ marginVertical: '5%' }}>
@@ -116,7 +125,7 @@ const styles = StyleSheet.create({
         marginLeft:3,
         marginRight:3,
         //flex:1,
-        backgroundColor:"red"
+        // backgroundColor:"#ffffff52"
       }
 })
 export default ProductCategory    

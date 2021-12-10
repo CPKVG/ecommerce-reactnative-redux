@@ -13,7 +13,7 @@ export const fetchProduct = () => async (dispatch:any) => {
         payload: productData
     })
     }catch(err){
-        dispatch( {
+        dispatch({
             type: productTypes.FETCH_PRODUCT_ERR,
             payload: err
         })
@@ -55,15 +55,7 @@ export const fetchProductSearch = (value:string|undefined) => async (dispatch:an
 }
 
 //get category from productCategory 
-export const fetchCategory = (value:string | undefined) => async (dispatch:any) =>{
-    console.log(value,"value in fetchCategory")
-    if(value == ""){
-        dispatch({
-            type:productTypes.SET_CATEGORY,
-            productCategorySelect:undefined
-        })
-    }
-    
+export const fetchCategory = (value:string | undefined) => async (dispatch:any) =>{    
     try{
         dispatch({
             type:productTypes.SET_CATEGORY,
@@ -77,6 +69,25 @@ export const fetchCategory = (value:string | undefined) => async (dispatch:any) 
     }
 
 }
+
+
+export const fetchProductDetail = (item: any) => async (dispatch:any) =>{
+    // console.log(item, "item in actions")
+    RootNavigation.navigate("Product", item.id)
+
+    //console.log(data)
+    try{
+        dispatch({
+            type:productTypes.SET_PRODUCT_DETAIL,
+            payload:item
+        })
+    }catch(err){
+        dispatch( {
+            type: productTypes.SET_PRODUCT_DETAIL,
+            payload: err
+        })
+    }
+} 
 
 
 export const addProducts = (productData:string) =>({

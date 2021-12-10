@@ -1,15 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchProductSearch } from './../../../redux/Product/product.action'
+import { fetchProductSearch, fetchProductDetail } from './../../../redux/Product/product.action'
 //search + fetch search results 
 
-import { Button, FlatList, Image, StyleSheet, Text, View } from 'react-native';
+import { Button, FlatList, Image, StyleSheet, Text, TouchableOpacity, TouchableWithoutFeedback, View } from 'react-native';
 import { RootState } from '../../../redux/rootReducer';
 import  ProductImage  from '../productImage';
+import { navigationRef } from '../../../RootNavigation';
 
 
 
 const ProductResult = () =>{
+
+  const dispatch = useDispatch();
+
+  const selectedProduct = (item:any) => {
+    //navigate to product page based on item.id
+    dispatch(fetchProductDetail(item))
+
+  }
 
     //const dispatch = useDispatch(); 
 
@@ -17,16 +26,12 @@ const ProductResult = () =>{
     const productSelector:any = useSelector((state: RootState) => state.product)
     //console.log(productSelector)
     let productDataSearch = productSelector.productDataSearch
-
-  //if productSelector != "" route to product page
   
-
-
     const renderItem = ({item}:any) => {
     
       return(
         //<ProductImage/>
-        <View style={styles.container}>
+        <TouchableOpacity onPress={ () => selectedProduct(item)} style={styles.container}>
           <Image 
             style = {styles.image}
             source = {ProductImage(item.image)}
@@ -37,7 +42,7 @@ const ProductResult = () =>{
           <Text style = {styles.price}>
             ${item.price} nzd
           </Text>
-        </View>
+        </TouchableOpacity >
       )
     }
 
