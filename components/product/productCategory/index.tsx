@@ -32,7 +32,6 @@ const ProductCategory = () =>{
 
     
     const productSelector:any = useSelector((state: RootState) => state.product)
-    //console.log(productSelector.productData,"productselector")
 
 
 
@@ -59,7 +58,6 @@ const ProductCategory = () =>{
     //filters category and first image of that category
     if(productData !== undefined && productData !== ""){
         data = productData.filter((val:any,id:number) => id == productData.findIndex((elem:any)=> elem.category == val.category))
-        // console.log(data)
     }
 
     const renderItem = ({item,backgroundColor,color}:any)=>{
@@ -85,7 +83,7 @@ const ProductCategory = () =>{
             data = {data}
             // horizontal = {true}
             renderItem = {renderItem}
-            sliderWidth={400}
+            sliderWidth={400}   
             itemWidth={125}
             loop={true}
             autoplay={true}

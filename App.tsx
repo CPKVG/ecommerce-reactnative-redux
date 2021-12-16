@@ -30,6 +30,8 @@ import { NavigationContainer } from '@react-navigation/native';
 //import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { navigationRef } from './RootNavigation';
+import ProductPageLayout from './layouts/ProductPageLayout';
+import CartPage from './pages/cartpage';
 
 
 
@@ -39,6 +41,7 @@ import { navigationRef } from './RootNavigation';
 export type RootStackParamList = {
   Home: undefined;
   Product: undefined;
+  Cart:undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -59,13 +62,20 @@ const HomeScreen = () => {
 
 const ProductScreen = () => {
   return(
-    <HomePageLayout>
+    <ProductPageLayout>
       {/* <Search/> */}
       <ProductPage/>
-    </HomePageLayout>
+    </ProductPageLayout>
   )
 }
 
+const CartScreen = () =>{
+  return(
+    <HomePageLayout>
+      <CartPage/>
+    </HomePageLayout>
+  )
+}
 
 
 
@@ -95,6 +105,10 @@ const App = () => {
         />
         <Stack.Screen name="Product" component={ProductScreen}
         />
+        <Stack.Screen name="Cart" component={CartScreen}
+        />
+        {/* <Stack.Screen name="CheckOut" component={CartScreen}
+        /> */}
 
       </Stack.Navigator>
     </NavigationContainer>
@@ -108,9 +122,6 @@ const styles = StyleSheet.create({
   container: {
     // flex: 1
     ...StyleSheet.absoluteFillObject
-  },
-  navItem:{
-
   }
 
 });

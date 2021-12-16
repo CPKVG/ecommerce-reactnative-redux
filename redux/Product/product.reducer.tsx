@@ -1,10 +1,10 @@
 import productTypes from './product.types';
 
 const INITIAL_STATE  = {
-    product: '',
+    product: [''],
     loading:true,
     productData:'',
-    productDataSearch:undefined,
+    productDataSearch:[undefined],
     productCategorySelect:"",
     // categoryBool:false
     };
@@ -22,21 +22,21 @@ const productReducer = (state = INITIAL_STATE, action:any) => {
             productDataSearch:action.payload,
             //categoryBool:action.categoryBool
             }
-        case productTypes.FETCH_PRODUCT_ERR:
-            return {
-            loading: false,
-            err:action.payload
-            }
+        // case productTypes.FETCH_PRODUCT_ERR:
+        //     return {
+        //     loading: false,
+        //     err:action.payload
+        //     }
         case productTypes.SET_CATEGORY:
             return{
             ...state,
             productCategorySelect:action.payload
             }
-        case productTypes.SET_CATEGORY_ERR:
-            return{
-                loading:false,
-                err:action.payload
-            }
+        // case productTypes.SET_CATEGORY_ERR:
+        //     return{
+        //         loading:false,
+        //         err:action.payload
+        //     }
         case productTypes.SET_PRODUCT_DETAIL:
             return{
                 ...state,

@@ -24,6 +24,7 @@ dependencies
     Redux
     `npm i redux`
     `npm i redux-thunk`
+    `npm install redux-persist`
     React-Native-Navigator v6 `https://reactnavigation.org/docs/getting-started`
     `npm i @react-navigation/native`
     `npm install react-native-screens react-native-safe-area-context`

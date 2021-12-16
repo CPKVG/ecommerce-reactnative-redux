@@ -8,13 +8,17 @@
  import {name as appName} from './app.json';
  import { Provider } from 'react-redux';
  
- import store from './redux/createStore';
+ import {store, persistor } from './redux/createStore';
+import { PersistGate } from 'redux-persist/integration/react';
+ 
  // const store = configureStore()
  
  
  const RNRedux = () => (
      <Provider store = { store }>    
-       <App />
+      <PersistGate loading = {null} persistor = {persistor}>
+        <App />
+       </PersistGate>
      </Provider>
    )
  

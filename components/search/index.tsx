@@ -30,7 +30,7 @@ const Search = () => {
                     typeof text == "string" ? (text.length == 0 ? text = undefined : text) : null
                     onChangeText(text)
                 }}
-                defaultValue = {text !== "" ? productCategorySelect : console.log("text = empty")}
+                defaultValue = {text !== "" ? productCategorySelect : null}
                 value={text}    
                 placeholder = "Search Products"
             />

@@ -24,7 +24,6 @@ const ProductResult = () =>{
 
     //return value from redux actions    
     const productSelector:any = useSelector((state: RootState) => state.product)
-    //console.log(productSelector)
     let productDataSearch = productSelector.productDataSearch
   
     const renderItem = ({item}:any) => {

@@ -26,7 +26,6 @@ export const fetchProduct = () => async (dispatch:any) => {
 
 export const fetchProductSearch = (value:string|undefined) => async (dispatch:any) => {
     let productDataSearch:any = ""
-    // console.log(categoryBool)
         if(typeof value == "string" && value.length !== 0){
             const reponse = await fetch(`http://localhost:3000/data`);
             productDataSearch = await reponse.json();
@@ -72,10 +71,8 @@ export const fetchCategory = (value:string | undefined) => async (dispatch:any) 
 
 
 export const fetchProductDetail = (item: any) => async (dispatch:any) =>{
-    // console.log(item, "item in actions")
     RootNavigation.navigate("Product", item.id)
 
-    //console.log(data)
     try{
         dispatch({
             type:productTypes.SET_PRODUCT_DETAIL,
