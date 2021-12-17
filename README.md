@@ -46,5 +46,5 @@ TO DO LIST
 
 Features 
     1) Dynamic search filter
-    2) Responsive category select + initgrated with search function 
+    2) Responsive category select + integrated with search function
     3) page navigation

@@ -28,9 +28,6 @@ const CartUI = () => {
         dispatch(addProduct(productDetail))
     }
 
-    //WIP match count from productDetail to cartSelector and output count for display
-    console.log(cartSelector)
-
     const navigation = useNavigation<cartScreenProp>();
 
     const handleCheckOut = (navigation: cartScreenProp) => {
@@ -39,25 +36,33 @@ const CartUI = () => {
     }
     let count = 0
 
-    // let countv2:any = cartSelector.nextCartItem[1][1]
+    // cartSelector.nextCartItem.map((x:any)=>{
+    //     x[1]
+    // })
+
+    //fetching count status from actions[
+    console.log(cartSelector.nextCartItem)
+    // typeof(cartSelector.nextCartItem) !== [null] ? 
+
+    if(cartSelector.nextCartItem !=- ""){
+        console.log("null")
+        cartSelector.nextCartItem.forEach((x:any)=>{
+
+            if(productDetail.id == x[0].id){
+                return (count = x[1].count)
+            }
+
+        })
+    }
+
+    // cartSelector.nextCartItem.forEach((x:any)=>{
+    //     // if(typeof(x[0]) !== null && productDetail.id == x[0].id){
+    //     //     return (count = x[1].count)
+    //     // }
+    //     typeof(x) == null ? "" : console.log(x[0])
+    // })
 
 
-    console.log(productDetail.id,"productDetail.id")
-    console.log(cartSelector.nextCartItem,"cartSelector.nextCartItem")
-    cartSelector.nextCartItem.map((x:any)=>{
-        x[1]
-    })
-    //console.log("test", cartSelector.nextCartItem.map())
-
-    cartSelector.nextCartItem.forEach((x:any)=>{
-        // x[1]
-
-        if(productDetail.id == x[0].id){
-            return (count = x[1].count)
-        }
-
-    })
-    
 
     return(
         <View style = {styles.container}>
