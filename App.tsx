@@ -32,6 +32,12 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { navigationRef } from './RootNavigation';
 import ProductPageLayout from './layouts/ProductPageLayout';
 import CartPage from './pages/cartpage';
+import CheckOutPage from './pages/checkoutpage';
+import CheckoutPageLayout from './layouts/CheckoutPageLayout';
+import Footer from './components/footer';
+import CartUI from './components/cart/cartUI';
+import ProductUI from './components/product/productUI';
+import CheckOutUI from './components/checkout/checkOutUI';
 
 
 
@@ -42,20 +48,16 @@ export type RootStackParamList = {
   Home: undefined;
   Product: undefined;
   Cart:undefined;
+  CheckOut:undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
-
-// const Search = React.createContext({})
-
 
 const HomeScreen = () => {
   
   return(
     <HomePageLayout>
-      {/* <Search/> */}
       <HomePage/>
-      {/* <ProductPage/> */}
     </HomePageLayout>
   )
 }
@@ -63,21 +65,29 @@ const HomeScreen = () => {
 const ProductScreen = () => {
   return(
     <ProductPageLayout>
-      {/* <Search/> */}
       <ProductPage/>
+      <ProductUI/>
     </ProductPageLayout>
   )
 }
 
 const CartScreen = () =>{
   return(
-    <HomePageLayout>
+    <ProductPageLayout>
       <CartPage/>
-    </HomePageLayout>
+      <CartUI/>
+    </ProductPageLayout>
   )
 }
 
-
+const CheckOutScreen = () => {
+  return(
+    <CheckoutPageLayout>
+      <CheckOutPage/>
+      <CheckOutUI/>
+    </CheckoutPageLayout>
+  )
+}
 
 const App = () => {
 
@@ -88,14 +98,14 @@ const App = () => {
     <NavigationContainer ref={navigationRef}>
       
       <Stack.Navigator
-        screenOptions={{
-          //headerShown: false
-          // header:() => (
-          //   <Search/>
-          // )
-        }}>
-          
-        
+        // screenOptions={{
+        //   //headerShown: false
+        //   // header:() => (
+        //   //   <Search/>
+        //   // )
+        // }}>
+
+        >
         <Stack.Screen name="Home" component={HomeScreen} 
           options= {{
             header:() => (
@@ -107,11 +117,13 @@ const App = () => {
         />
         <Stack.Screen name="Cart" component={CartScreen}
         />
-        {/* <Stack.Screen name="CheckOut" component={CartScreen}
-        /> */}
-
+        <Stack.Screen name="CheckOut" component={CheckOutScreen}
+        />
       </Stack.Navigator>
+      
     </NavigationContainer>
+
+    
 </>
 
 

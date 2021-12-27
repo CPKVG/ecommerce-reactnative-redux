@@ -1,6 +1,7 @@
 import React from "react"
 import { FlatList, Image, StyleSheet, Text, TouchableOpacity, View } from "react-native"
-import { useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
+import { increaseCartItem, reduceCartItem, removeCartItem } from "../../../redux/Cart/cart.action"
 import { RootState } from "../../../redux/rootReducer"
 import ProductImage from "../../product/productImage"
 
@@ -8,15 +9,20 @@ const CartDetail = () => {
     const cartSelector:any = useSelector((state: RootState) => state.cart)
     
     const cartItems = cartSelector.nextCartItem
+    const dispatch = useDispatch()
 
-    const increment = () => {
-        console.log("increment")
+    const increment = (item:any) => {
+        //increase count of item by 1
+        dispatch(increaseCartItem(item))
     }
 
-    const decrement = () => {
-        console.log("decrement")
+    const decrement = (item:any) => {
+        dispatch(reduceCartItem(item))
+        
     }
-    //TRIAL 1, MUST BE A CLEANER WAY OF DOING THIS!!!
+    const deleteBtn = (item:any) =>{
+        dispatch(removeCartItem(item))
+    }
 
     const BtnScales = ({item,onPress}:any) => (
         <View>
@@ -28,44 +34,49 @@ const CartDetail = () => {
     ) 
     // make this look like <BtnScales2> {-} </BtnScales2/> {count} ...repeat for +
 
+
     const renderItem = ({item, index}:any) => {
-        console.log(item)
+
         return(
+
             <View style={{backgroundColor: index % 2 === 0 ? "" : '#ffffff' }} >
 
                 <View  style = {styles.item_container}>
-                    <Image 
-                        style = {styles.image}
-                        source = {ProductImage(item[0].image)}
-                    />  
+                    <View style = {styles.sub_container}>
+                        <Image 
+                            style = {styles.image}
+                            source = {ProductImage(item[0].image)}
+                        />  
+
+                        <View style = {styles.delete_btn_container} >
+                            <TouchableOpacity style = {styles.delete_btn} onPress = {() => deleteBtn(item)}>
+                                    <Text style = {styles.delete_btn_txt}>Delete</Text>
+                            </TouchableOpacity>
+                        </View>
+
+                    </View>
+
                     <View style = {styles.text_container}>
                         <Text style = {styles.text}>
                             {item[0].title}     
                         </Text>
-                        {/* <Text style = {styles.text}>
-                            Count : <BtnScales item = {item[1].count}/> 
-                        </Text> */}
-                        <View style = {styles.scales_container}>
-                            {/* <Text style = {styles.scales_text}> 
-                                Count : 
-                            </Text> */}
-                        <BtnScales item = {"-"} onPress = {() => decrement()}/>
-                            <Text style = {styles.scales_text}>
-                               {item[1].count}
+                        <View style = {styles.price_container}>
+                            <Text style = {styles.pricetxt}>
+                                ${item[0].price} nzd
                             </Text>
-                        <BtnScales item = {"+"} onPress = {() => increment()}/>
+                        </View>
+                        <View style = {styles.scales_container}>
+                            <BtnScales item = {"-"} onPress = {() => decrement(item)}/>
+                                <Text style = {styles.scales_text}>
+                                {item[1].count}
+                                </Text>
+                            <BtnScales item = {"+"} onPress = {() => increment(item)}/>
                         </View>
 
 
                     </View>
                 </View>
 
-
-            <View style = {styles.delete_btn_container} >
-                <TouchableOpacity style = {styles.delete_btn}>
-                        <Text style = {styles.text}>Delete</Text>
-                    </TouchableOpacity>
-                </View>
 
             </View>
             
@@ -79,10 +90,8 @@ const CartDetail = () => {
             <FlatList
                 data = {cartItems}
                 ItemSeparatorComponent={
-                    () => <View style={{ margin: 10 }}/>
-                
+                    () => <View style={{ margin: 15 }}/>
                 }    
-                
                 renderItem = {renderItem}
             />
 
@@ -94,7 +103,8 @@ const CartDetail = () => {
 const styles = StyleSheet.create({
     container:{
         marginTop:10,
-        padding:6,
+        padding:4,  
+        
     },
     header:{
         fontSize:26,
@@ -103,39 +113,63 @@ const styles = StyleSheet.create({
         marginBottom:20,
     },
     delete_btn_container:{
-        flex:1,
+        // flex:1,
         // alignItems:"flex-start"
         // justifyContent:"center",
-        backgroundColor:"red",
-        marginTop:10,
+        marginTop:8,
+        backgroundColor:"#ee3311",
+        borderColor:"white",
+        borderWidth:2,
+        borderRadius:8,
     },
     delete_btn:{
         // backgroundColor:"red",
         alignItems:"center",
+
+    },
+    delete_btn_txt:{
+        fontSize:30,
+        fontWeight:"bold",
+        color:"white"
     },
     item_container:{
         flexDirection:"row",
         flexWrap: "wrap",
-        // justifyContent:"space-evenly"
+        justifyContent:"space-evenly"
+    },
+    sub_container:{
+        // paddingLeft:10,
+        // flexDirection:"column",
+        // flex:1, 
+        // justifyContent:"space-between"
+        
     },
     text_container:{
         paddingLeft:10,
-        flexDirection:"column",
-        flex:1, 
+        // flexDirection:"column",
+        // flex:1, 
         justifyContent:"space-between"
     },
     text:{
-        fontSize:28,
+        fontSize:30,
+    },
+    price_container:{
+        alignItems:"flex-end"
+    },
+    pricetxt:{
+        fontSize:20
     },
     image:{
         height:125,
         width:125,
-        flex:1,
+        // flex:1,
       },
       scales_container:{
         flexDirection:"row",
-        alignItems:"baseline",
+        // alignItems:"baseline",
         justifyContent:"space-evenly",
+        alignItems:"center",
+        // backgroundColor:"red"
       },
       scales:{
           fontSize:36,
@@ -146,7 +180,8 @@ const styles = StyleSheet.create({
       },
       scales_text:{
           fontSize:36,
-          fontWeight:"bold"
+          fontWeight:"bold",
+          paddingHorizontal:10,
       }
 
 })

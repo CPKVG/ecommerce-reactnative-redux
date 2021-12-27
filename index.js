@@ -10,11 +10,11 @@
  
  import {store, persistor } from './redux/createStore';
 import { PersistGate } from 'redux-persist/integration/react';
- 
+ import {Footer} from './components/footer';
  // const store = configureStore()
  
- 
  const RNRedux = () => (
+
      <Provider store = { store }>    
       <PersistGate loading = {null} persistor = {persistor}>
         <App />

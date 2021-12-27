@@ -5,21 +5,23 @@ import { Button, StyleSheet, Text, TouchableOpacity, View } from "react-native"
 import { useDispatch, useSelector } from "react-redux"
 import { RootStackParamList } from "../../../App"
 import { addProduct } from "../../../redux/Cart/cart.action"
+import { submitCart } from "../../../redux/Checkout/checkout.action"
 import { RootState } from "../../../redux/rootReducer"
 
 
 
 type cartScreenProp = NativeStackNavigationProp<RootStackParamList, 'Cart'>;
 
-const CartUI = () => {
+const CheckOutUI = () => {
     const navigation = useNavigation<cartScreenProp>();
-
+    const dispatch = useDispatch()
+    
     const handleCheckOut = (navigation: cartScreenProp) => {
-        //redirect to cart page
-        navigation.navigate('CheckOut')// checkout page not cart,
+        // navigation.navigate('purchase')
+        dispatch(submitCart())
     }
 
-    //fetching count status from actions
+    
 
     return(
         <View style = {styles.container}>            
@@ -27,8 +29,8 @@ const CartUI = () => {
                 style = {styles.Btn}
                 onPress ={() => handleCheckOut(navigation)}
             >
-                <Text style = {styles.checkOutBtnTxt}>
-                    Continue
+                <Text style = {styles.btnTxt}>
+                    Order Submit
                 </Text>
             </TouchableOpacity>
         </View>
@@ -56,7 +58,7 @@ const styles = StyleSheet.create({
         backgroundColor:"#1db954",
         borderColor:"#E0E0E0",
     },
-    checkOutBtnTxt:{
+    btnTxt:{
         textAlign:"center",
         fontSize:24,
         fontWeight:"bold",
@@ -64,4 +66,4 @@ const styles = StyleSheet.create({
     }
 
 })
-export default CartUI
+export default CheckOutUI

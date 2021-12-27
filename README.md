@@ -39,12 +39,12 @@ dependencies
 TO DO LIST
     1) Homepage category selection (X)
     2) Carousel category (X)
-    3) Product add cart 
+    3) Product add cart (x)
     4) product detail page -> page navigation (x)
-    5) Cart page 
-    6) Login + logout
+    5) Cart page (x)
 
 Features 
     1) Dynamic search filter
     2) Responsive category select + integrated with search function
-    3) page navigation
+    3) Page navigation
+    4) CheckOut page
