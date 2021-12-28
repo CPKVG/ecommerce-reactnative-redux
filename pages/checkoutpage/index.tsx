@@ -1,11 +1,11 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import CheckOutDetail from '../../components/checkout/checkOutDetail';
+import CheckoutDetail from '../../components/checkout/checkoutDetail';
 
-const CheckOutPage = () => {
+const CheckoutPage = () => {
     return(
         <View>
-            <CheckOutDetail/>
+            <CheckoutDetail/>
         </View>
     )
 }
@@ -14,4 +14,4 @@ const styles = StyleSheet.create({
     
 })
 
-export default CheckOutPage
+export default CheckoutPage

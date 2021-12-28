@@ -1,12 +1,16 @@
 import CheckoutTypes from "./checkout.types";
 
 
-export const submitCart= () => async (dispatch:any) => {
+export const submitCart = () => async (dispatch:any) => {
     //button action fromm checkoutUI
     dispatch({
         type: CheckoutTypes.SUBMIT_ORDER,
         payload:true
         })
+}
+
+export const inputValidation = (data:any) => async (dispatch:any)=> {
+
 }
 
 export const toggleSubmitCardBtn = () => async (dispatch:any) => {

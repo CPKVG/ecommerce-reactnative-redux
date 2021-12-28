@@ -12,7 +12,7 @@ import { RootState } from "../../../redux/rootReducer"
 
 type cartScreenProp = NativeStackNavigationProp<RootStackParamList, 'Cart'>;
 
-const CheckOutUI = () => {
+const CheckoutUI = () => {
     const navigation = useNavigation<cartScreenProp>();
     const dispatch = useDispatch()
     
@@ -66,4 +66,4 @@ const styles = StyleSheet.create({
     }
 
 })
-export default CheckOutUI
+export default CheckoutUI

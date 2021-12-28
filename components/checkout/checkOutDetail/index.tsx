@@ -1,8 +1,8 @@
 import { anyTypeAnnotation } from "@babel/types";
 import React, { ChangeEvent, useEffect, useState } from "react"
-import { FlatList, NativeSyntheticEvent, ScrollView, StyleSheet, Text, TextInput, TextInputChangeEventData, View } from "react-native"
+import { FlatList, NativeSyntheticEvent, ScrollView, SectionList, StyleSheet, Text, TextInput, TextInputChangeEventData, View } from "react-native"
 import { useDispatch } from "react-redux";
-import { toggleSubmitCardBtn } from "../../../redux/Checkout/checkout.action";
+import { inputValidation, toggleSubmitCardBtn } from "../../../redux/Checkout/checkout.action";
 
 
 
@@ -29,6 +29,24 @@ const contactData = [
     "Email","Phone"
 ]
 
+
+const DATA = [
+    {
+        title:"Contact Information",
+        data:debitCardData
+    },
+    {
+        title:"Postal Adress",  
+        data:postalAdressData
+    },
+    {
+        title:"Payment Information",    
+        data:contactData
+    },
+
+]
+
+
     //convert arr values -> obj's keys & "" -> values 
 const arr2obj = (array:Array<string>) => {
     let obj:any = {}
@@ -42,8 +60,8 @@ let contactDataObj = arr2obj(contactData)
 let debitCardDataObj = arr2obj(debitCardData)
 let postalAdressDataObj = arr2obj(postalAdressData)
 
-
-
+let dataObj = arr2obj(contactData.concat(debitCardData,postalAdressData))
+console.log(dataObj,"dataObj1")
 
 export const CheckOutDetail = () => {
     //display shopping cart info(ITEM NAME, Quantity , TOTAL PRICE)
@@ -74,131 +92,51 @@ export const CheckOutDetail = () => {
 
 
     let [value, onChangeValue]:any = useState()
+
     useEffect(() => {
         
         //dispatch data validationn mechanism here (i.e valid creditcard check)
-
-        // console.log(debitCardDataObj)
-        // console.log(postalAdressDataObj)
-        // console.log(contactDataObj)
-        
+        dispatch(inputValidation(value))
+        console.log(value,"useEffect")
     },[value])
         
-    const renderItemCard = ({item,index}:any) => {
-
-        const onChangeCard = (e:NativeSyntheticEvent<TextInputChangeEventData>):void => {
+    const renderItem = ({item,title,index}:any) => {
+        const onChange = (e:NativeSyntheticEvent<TextInputChangeEventData>):void => {
             const value = e.nativeEvent.text;
-            if(Object.keys(debitCardDataObj)[index] == item){
-                debitCardDataObj[item] = value
-            }
-            onChangeValue(debitCardDataObj) 
-        }
 
-            return(
-                <InputForm 
-                placeholder = {item}
-                style_input = {item == "CVC code" ? styles.card_Cvc_Input : styles.card_Input}
-                onChange_input = {onChangeCard}
-                defaultValue = {debitCardDataObj[item]}
-                keyboardType = {item == "Card number" || item == "CVC code" ? "numeric": "default"}
-            />
-        )
-}
+            //to match dataObj(keys) to item    
 
-    const renderItemContact = ({item,index}:any) => {
-            const onChangeContact = (e:NativeSyntheticEvent<TextInputChangeEventData>):void => {
-                const value = e.nativeEvent.text;
-                if(Object.keys(contactDataObj)[index] == item){
-                    contactDataObj[item] = value
+            Object.keys(dataObj).forEach((x:any) => {
+                if(item == x){
+                    dataObj[x] = value
                 }
-                onChangeValue(contactDataObj) 
-            }
-
-            return(
-                <InputForm 
-                placeholder = {item}
-                style_input = {styles.card_Input}
-                onChange_input = {onChangeContact}
-                defaultValue = {contactDataObj[item]}
-                keyboardType = {item == "Phone" ? "numeric": "default"}
-            />
-        )
-
-    }
-
-    const renderItemAdress = ({item,index}:any) => {
-        
-        const onChangeAddress = (e:NativeSyntheticEvent<TextInputChangeEventData>):void => {
-            const value = e.nativeEvent.text;
-
-            if(Object.keys(postalAdressDataObj)[index] == item){
-                postalAdressDataObj[item] = value
-            }
-            onChangeValue(postalAdressDataObj) 
+                return dataObj
+            })
+            onChangeValue(dataObj) 
         }
 
         return(
             <InputForm 
-            placeholder = {item}
-            style_input = {styles.input}
-            onChange_input = {onChangeAddress}
-            defaultValue = {postalAdressDataObj[item]}
-            // keyboardType = "default"
-        />
+                placeholder = {item}
+                style_input = {item == "CVC code" ? styles.input : styles.card_Input}
+                onChange_input = {onChange}
+                defaultValue = {DATA[item]}
+               keyboardType = {item == "Card number" || item == "CVC code" || item == "Phone" || item == "PostCode" ? "numeric": "default"}
+            />
         )
     }
-
-
-
     return(
-    <View>
-
-        <View style={{flex: 1}}>
-            <Text style = {styles.subheader}>
-                Contact Information
-            </Text>
-            
-            <FlatList
-            data={contactData}
-            renderItem={renderItemContact}
-            scrollEnabled={false} 
+        <View style = {styles.container}>
+            <SectionList
+                sections={DATA}
+                renderItem={renderItem}
+                keyExtractor = {(item, index) => item + index}
+                renderSectionHeader={({ section: { title } }) => (
+                    <Text style={styles.header}>{title}</Text>
+                )}
+                
             />
         </View>
-
-
-        <View style={{flex: 1}}>
-            <Text style = {styles.subheader}>
-                Payment Information
-            </Text>
-
-            <FlatList
-            data={debitCardData}
-            renderItem={renderItemCard}
-            columnWrapperStyle = {styles.columnWrapperStyle}
-            horizontal={false}
-            numColumns ={2}
-            scrollEnabled={false} 
-            // ItemSeparatorComponent={
-            //     () => <View style={{ width: 16 }}/>
-            // }    
-            // keyExtractor={item => item.id}
-            />
-        </View>
-        
-        <View style={{flex: 1}}>
-            <Text style = {styles.subheader}>
-                Delivery Address
-            </Text>
-
-            <FlatList
-            data={postalAdressData}
-            renderItem={renderItemAdress}
-            // scrollEnabled={false} 
-            />
-        </View>
-
-
-    </View>
     )
 }
 
@@ -214,6 +152,13 @@ const styles = StyleSheet.create({
         padding:2,
         marginVertical:8,
     },  
+    header: {
+        fontSize: 32,
+        backgroundColor: "#fff"
+      },
+      title: {
+        fontSize: 24
+      },
     columnWrapperStyle:{
         flexWrap:"wrap",
         flex:1,
@@ -243,7 +188,8 @@ const styles = StyleSheet.create({
       height: 40,
       margin: 12,
       borderWidth: 1,
-      padding: 10,  
+      padding: 10,
+      flex:1
 
     },
   });

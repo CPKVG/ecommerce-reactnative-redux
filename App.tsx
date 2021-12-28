@@ -34,11 +34,9 @@ import ProductPageLayout from './layouts/ProductPageLayout';
 import CartPage from './pages/cartpage';
 import CheckOutPage from './pages/checkoutpage';
 import CheckoutPageLayout from './layouts/CheckoutPageLayout';
-import Footer from './components/footer';
 import CartUI from './components/cart/cartUI';
 import ProductUI from './components/product/productUI';
-import CheckOutUI from './components/checkout/checkOutUI';
-
+import CheckoutUI from './components/checkout/checkoutUI';
 
 
 //const Home = () => <Text >Home</Text>;
@@ -71,7 +69,7 @@ const ProductScreen = () => {
   )
 }
 
-const CartScreen = () =>{
+const CartScreen = () =>{ 
   return(
     <ProductPageLayout>
       <CartPage/>
@@ -84,7 +82,7 @@ const CheckOutScreen = () => {
   return(
     <CheckoutPageLayout>
       <CheckOutPage/>
-      <CheckOutUI/>
+      {/* <CheckoutUI/> */}
     </CheckoutPageLayout>
   )
 }
