@@ -4,9 +4,8 @@ import { FlatList, NativeSyntheticEvent, ScrollView, SectionList, StyleSheet, Te
 import { useDispatch } from "react-redux";
 import { inputValidation, toggleSubmitCardBtn } from "../../../redux/Checkout/checkout.action";
 
-
-
-const InputForm = ({item,placeholder,style_input,onChange_input,defaultValue,keyboardType}:any) => (
+const InputForm = ({container_style,placeholder,style_input,onChange_input,defaultValue,keyboardType}:any) => (
+    <View style = {container_style}>
             <TextInput
                 style={style_input}
                 onChange = {onChange_input}
@@ -14,6 +13,8 @@ const InputForm = ({item,placeholder,style_input,onChange_input,defaultValue,key
                 defaultValue = {defaultValue}
                 keyboardType= {keyboardType}
             />
+     </View>
+
 )
 
 //to generate flatlist with thses as label inputs
@@ -33,21 +34,19 @@ const contactData = [
 const DATA = [
     {
         title:"Contact Information",
-        data:debitCardData
+        data:[debitCardData]
     },
     {
         title:"Postal Adress",  
-        data:postalAdressData
+        data:[postalAdressData]
     },
     {
         title:"Payment Information",    
-        data:contactData
+        data:[contactData]
     },
 
 ]
 
-
-    //convert arr values -> obj's keys & "" -> values 
 const arr2obj = (array:Array<string>) => {
     let obj:any = {}
     array.forEach((x:any) => {
@@ -63,135 +62,103 @@ let postalAdressDataObj = arr2obj(postalAdressData)
 let dataObj = arr2obj(contactData.concat(debitCardData,postalAdressData))
 console.log(dataObj,"dataObj1")
 
-export const CheckOutDetail = () => {
-    //display shopping cart info(ITEM NAME, Quantity , TOTAL PRICE)
-    //+ paymenet information
-    //inputs
 
-    //payment info (debit cards)
-    // 1) card number   
-    // 2) CVC Code 
-    // 3) card name 
+const renderItem = ({item,title,index}:any) => {
+    const onChange = (e:NativeSyntheticEvent<TextInputChangeEventData>):void => {
+        const value = e.nativeEvent.text;
 
-    //Contact info
-    //1) email
-    //2) phone
-    
-    //delivery info
-    // 1) first + lastname
-    // 2) Street address
-    // 3) City
-    // 4) post code   
-    
-    //show/hide btn only when input values are all filled
-    const dispatch = useDispatch()
+        //to match dataObj(keys) to item    
 
-
-
-    // let [text, onChangeText] = useState<string>("");
-
-
-    let [value, onChangeValue]:any = useState()
-
-    useEffect(() => {
-        
-        //dispatch data validationn mechanism here (i.e valid creditcard check)
-        dispatch(inputValidation(value))
-        console.log(value,"useEffect")
-    },[value])
-        
-    const renderItem = ({item,title,index}:any) => {
-        const onChange = (e:NativeSyntheticEvent<TextInputChangeEventData>):void => {
-            const value = e.nativeEvent.text;
-
-            //to match dataObj(keys) to item    
-
-            Object.keys(dataObj).forEach((x:any) => {
-                if(item == x){
-                    dataObj[x] = value
-                }
-                return dataObj
-            })
-            onChangeValue(dataObj) 
-        }
-
-        return(
-            <InputForm 
-                placeholder = {item}
-                style_input = {item == "CVC code" ? styles.input : styles.card_Input}
-                onChange_input = {onChange}
-                defaultValue = {DATA[item]}
-               keyboardType = {item == "Card number" || item == "CVC code" || item == "Phone" || item == "PostCode" ? "numeric": "default"}
-            />
-        )
+        Object.keys(dataObj).forEach((x:any) => {
+            if(item == x){
+                dataObj[x] = value
+            }
+            return dataObj
+        })
+        // onChangeValue(dataObj) 
     }
-    return(
-        <View style = {styles.container}>
-            <SectionList
-                sections={DATA}
-                renderItem={renderItem}
-                keyExtractor = {(item, index) => item + index}
-                renderSectionHeader={({ section: { title } }) => (
-                    <Text style={styles.header}>{title}</Text>
-                )}
-                
-            />
-        </View>
+
+    return( 
+    // <View style = {styles.input_conatiner}>
+        <InputForm
+            placeholder = {item}
+            onChange_input = {onChange}
+
+            //shift the proportion of flex space for that row
+            container_style = {[
+                item == "CVC code" ? {flex:0.3} : styles.input_conatiner,
+                item == "Card number" ? {flex:0.7} : null,
+                item == "Card holder name" || item == "PostCode"  ? {flex:1} : null,
+            ]}
+
+            style_input = {styles.input}
+        />
     )
 }
 
+
+
+
+const renderSectionListItem = ({item}:any) => {
+    return(
+        <View style = {styles.flatList_container}>
+            <FlatList
+                data = {item}
+                numColumns={2}
+                renderItem = {renderItem}
+            />
+        </View>
+
+    )
+}
+export const CheckOutDetail = () => {
+
+    return(
+        <View style = {styles.container}>
+            <SectionList
+            sections={DATA}
+            renderItem={renderSectionListItem}
+            // keyExtractor = {(item, index) => item + index}
+            renderSectionHeader={({ section: { title } }) => (
+                <Text style={styles.header}>{title}</Text>
+            )}
+        />
+        </View>
+
+
+    )
+}
+
+
 const styles = StyleSheet.create({
 
-    container:{
-        // flex:1,
-        // padding:8,
-    },
-    subheader:{
-        fontSize:20,
-        fontWeight:"bold",
-        padding:2,
-        marginVertical:8,
-    },  
     header: {
         fontSize: 32,
-        backgroundColor: "#fff"
+        backgroundColor: "#fff",
+        padding:3,
+        marginTop:3,
       },
-      title: {
-        fontSize: 24
+      container:{
       },
-    columnWrapperStyle:{
-        flexWrap:"wrap",
+      flatList_container:{
         flex:1,
-        marginTop:5,
-        backgroundColor:"pink",
-        // justifyContent:"space-evenly",
-    },
-    card_Input_container:{
-        // flex:1, 
-        // flexDirection:"row",
-        // flexWrap:"wrap",
-        // backgroundColor:"red",
-        // justifyContent:"space-evenly",
-    },
-    card_Input:{
-        borderWidth:4,
-        borderColor:"black",
-        flex:3,     
-    },
-    card_Cvc_Input:{
-        flex:1,
-    },
-    input_container:{
+        // borderWidth: 3,
+        // justifyContent:"flex-end",
+      },
 
-    }, 
-    input: {
-      height: 40,
-      margin: 12,
-      borderWidth: 1,
-      padding: 10,
-      flex:1
-
-    },
-  });
-
+      input_conatiner:{
+        flex:0.5,
+      },
+      input:{
+        // minWidth:150,
+        height: 50,
+        // margin: 12,
+        borderWidth:1,
+        borderRadius:2,
+        padding: 10,
+        marginHorizontal:6,
+        marginVertical:4,
+        backgroundColor:"#ffff",
+      }
+    })
 export default CheckOutDetail
