@@ -10,30 +10,35 @@ import { RootState } from "../../../redux/rootReducer"
 
 
 
-type cartScreenProp = NativeStackNavigationProp<RootStackParamList, 'Cart'>;
+type PurchaseScreenProp = NativeStackNavigationProp<RootStackParamList, 'Purchase'>;
 
-const CheckoutUI = () => {
-    const navigation = useNavigation<cartScreenProp>();
+const CheckoutUI = ({validCheckoutInput}:any) => {
+    const navigation = useNavigation<PurchaseScreenProp>();
     const dispatch = useDispatch()
     
-    const handleCheckOut = (navigation: cartScreenProp) => {
-        // navigation.navigate('purchase')
-        dispatch(submitCart())
+    const handleCheckOut = (navigation: PurchaseScreenProp) => {
+       navigation.navigate('Purchase')
+        // dispatch(submitCart())
     }
 
+    const checkoutSelector:any = useSelector((state: RootState) => state.checkout)
+    validCheckoutInput = checkoutSelector.valid
     
-
+    // validCheckoutInput = false
+    console.log(validCheckoutInput)
     return(
-        <View style = {styles.container}>            
-            <TouchableOpacity
-                style = {styles.Btn}
-                onPress ={() => handleCheckOut(navigation)}
-            >
-                <Text style = {styles.btnTxt}>
-                    Order Submit
-                </Text>
-            </TouchableOpacity>
-        </View>
+        validCheckoutInput ? 
+            <View style = {styles.container}>            
+                <TouchableOpacity testID = {"btn"}
+                    style = {styles.Btn}
+                    onPress ={() => handleCheckOut(navigation)}
+                >
+                    <Text style = {styles.btnTxt}>
+                        Order Submit
+                    </Text>
+                </TouchableOpacity>
+
+            </View> : null
     )
 }
 const styles = StyleSheet.create({

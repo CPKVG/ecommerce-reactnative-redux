@@ -30,8 +30,11 @@ dependencies
     `npm install react-native-screens react-native-safe-area-context`
     <!-- `npm install @react-navigation/stack` -->
     `npm install @react-navigation/native-stack`
+     for testing 
+    <!-- 'npm i enzyme'
+    'npm i jest-enzyme'
+    'npm i @wojtekmaj/enzyme-adapter-react-17' -->
     
-
     snap Carousel 
     `npm install react-native-snap-carousel`
 
@@ -42,9 +45,11 @@ TO DO LIST
     3) Product add cart (x)
     4) product detail page -> page navigation (x)
     5) Cart page (x)
+    6) Testing 
 
 Features 
     1) Dynamic search filter
     2) Responsive category select + integrated with search function
     3) Page navigation
     4) CheckOut page
+    5) Easy to configure backend

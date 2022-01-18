@@ -16,7 +16,7 @@ import { PersistGate } from 'redux-persist/integration/react';
  const RNRedux = () => (
 
      <Provider store = { store }>    
-      <PersistGate loading = {null} persistor = {persistor}>
+      <PersistGate persistor = {persistor}>
         <App />
        </PersistGate>
      </Provider>

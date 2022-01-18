@@ -5,10 +5,12 @@ import { increaseCartItem, reduceCartItem, removeCartItem } from "../../../redux
 import { RootState } from "../../../redux/rootReducer"
 import ProductImage from "../../product/productImage"
 
-const CartDetail = () => {
+const CartDetail = ({cartItems}:any) => {
     const cartSelector:any = useSelector((state: RootState) => state.cart)
     
-    const cartItems = cartSelector.nextCartItem
+    cartItems = cartSelector.nextCartItem
+    
+    console.log(cartItems)
     const dispatch = useDispatch()
 
     const increment = (item:any) => {
@@ -46,6 +48,7 @@ const CartDetail = () => {
                         <Image 
                             style = {styles.image}
                             source = {ProductImage(item[0].image)}
+                            // testID = {item}
                         />  
 
                         <View style = {styles.delete_btn_container} >
@@ -56,28 +59,28 @@ const CartDetail = () => {
 
                     </View>
 
-                    <View style = {styles.text_container}>
-                        <Text style = {styles.text}>
-                            {item[0].title}     
-                        </Text>
+                    <View style = {styles.container}>
+                        <View style = {styles.text_container}>
+                            <Text style = {styles.text} testID="title">
+                                {item[0].title}     
+                            </Text>
+                        </View>
+
                         <View style = {styles.price_container}>
-                            <Text style = {styles.pricetxt}>
+                            <Text style = {styles.pricetxt} testID="price">
                                 ${item[0].price} nzd
                             </Text>
                         </View>
+
                         <View style = {styles.scales_container}>
                             <BtnScales item = {"-"} onPress = {() => decrement(item)}/>
-                                <Text style = {styles.scales_text}>
+                                <Text style = {styles.scales_text} testID="count">
                                 {item[1].count}
                                 </Text>
                             <BtnScales item = {"+"} onPress = {() => increment(item)}/>
                         </View>
-
-
                     </View>
                 </View>
-
-
             </View>
             
 

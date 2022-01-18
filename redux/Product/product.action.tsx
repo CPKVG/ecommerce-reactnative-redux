@@ -54,18 +54,17 @@ export const fetchProductSearch = (value:string|undefined) => async (dispatch:an
 }
 
 //get category from productCategory 
-export const fetchCategory = (value:string | undefined) => async (dispatch:any) =>{    
-    try{
-        dispatch({
-            type:productTypes.SET_CATEGORY,
-            payload:value
-        })
-    }catch(err){
-        dispatch( {
-            type: productTypes.SET_CATEGORY_ERR,
-            payload: err
-        })
+export const fetchCategory = (value:string | undefined) => async (dispatch:any) =>{  
+
+    if(value !== undefined || value !== null){
+            dispatch({
+                type:productTypes.SET_CATEGORY,
+                payload:value
+            })
+    }else{
+        // console.log("i am undefined")
     }
+
 
 }
 

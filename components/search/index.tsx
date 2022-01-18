@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import ProductPage from '../../pages/productpage';
 import { fetchCategory, fetchProductSearch } from '../../redux/Product/product.action';
 import { RootState } from '../../redux/rootReducer';
-import * as RootNavigation from '../../RootNavigation'
+// import * as RootNavigation from '../../RootNavigation'
 
 
 
@@ -14,7 +14,9 @@ const Search = () => {
 
     const productSelector:any = useSelector((state: RootState) => state.product)
 
+
     const productCategorySelect = productSelector.productCategorySelect
+    // console.log(typeof(productCategorySelect),"do i appear undefined?")
     let [text, onChangeText] = useState<string | undefined>(undefined);
 
     useEffect(() => {

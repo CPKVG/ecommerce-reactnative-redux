@@ -37,6 +37,7 @@ import CheckoutPageLayout from './layouts/CheckoutPageLayout';
 import CartUI from './components/cart/cartUI';
 import ProductUI from './components/product/productUI';
 import CheckoutUI from './components/checkout/checkoutUI';
+import PurchasePage from './pages/purchasepage';
 
 
 //const Home = () => <Text >Home</Text>;
@@ -47,11 +48,12 @@ export type RootStackParamList = {
   Product: undefined;
   Cart:undefined;
   CheckOut:undefined;
+  Purchase:undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
-const HomeScreen = () => {
+export const HomeScreen = () => {
   
   return(
     <HomePageLayout>
@@ -60,7 +62,7 @@ const HomeScreen = () => {
   )
 }
 
-const ProductScreen = () => {
+export const ProductScreen = () => {
   return(
     <ProductPageLayout>
       <ProductPage/>
@@ -69,7 +71,7 @@ const ProductScreen = () => {
   )
 }
 
-const CartScreen = () =>{ 
+export const CartScreen = () =>{ 
   return(
     <ProductPageLayout>
       <CartPage/>
@@ -78,12 +80,18 @@ const CartScreen = () =>{
   )
 }
 
-const CheckOutScreen = () => {
+export const CheckOutScreen = () => {
   return(
     <CheckoutPageLayout>
       <CheckOutPage/>
       {/* <CheckoutUI/> */}
     </CheckoutPageLayout>
+  )
+}
+
+export const PurchaseScreen = () => {
+  return(
+    <PurchasePage/>
   )
 }
 
@@ -117,6 +125,9 @@ const App = () => {
         />
         <Stack.Screen name="CheckOut" component={CheckOutScreen}
         />
+        <Stack.Screen name="Purchase" component={PurchaseScreen}
+        />
+
       </Stack.Navigator>
       
     </NavigationContainer>

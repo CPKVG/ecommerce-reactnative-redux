@@ -26,6 +26,7 @@ const CartUI = () => {
             <TouchableOpacity
                 style = {styles.Btn}
                 onPress ={() => handleCheckOut(navigation)}
+                testID="btn"
             >
                 <Text style = {styles.checkOutBtnTxt}>
                     Continue

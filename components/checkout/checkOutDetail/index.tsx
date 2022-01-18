@@ -1,8 +1,8 @@
-import { anyTypeAnnotation } from "@babel/types";
+// import { anyTypeAnnotation } from "@babel/types";
 import React, { ChangeEvent, useEffect, useState } from "react"
 import { FlatList, NativeSyntheticEvent, ScrollView, SectionList, StyleSheet, Text, TextInput, TextInputChangeEventData, View } from "react-native"
 import { useDispatch } from "react-redux";
-import { inputValidation, toggleSubmitCardBtn } from "../../../redux/Checkout/checkout.action";
+import { inputValidation } from "../../../redux/Checkout/checkout.action";
 
 const InputForm = ({container_style,placeholder,style_input,onChange_input,defaultValue,keyboardType}:any) => (
     <View style = {container_style}>
@@ -19,7 +19,7 @@ const InputForm = ({container_style,placeholder,style_input,onChange_input,defau
 
 //to generate flatlist with thses as label inputs
 const debitCardData = [
-    "Card number","CVC code","Card holder name"
+    "Card number","CVC code","Card holder name","Expire date"
   ];
 
 const postalAdressData = [
@@ -55,19 +55,27 @@ const arr2obj = (array:Array<string>) => {
     return(obj)
 }
 
-let contactDataObj = arr2obj(contactData)
-let debitCardDataObj = arr2obj(debitCardData)
-let postalAdressDataObj = arr2obj(postalAdressData)
+// let contactDataObj = arr2obj(contactData)
+// let debitCardDataObj = arr2obj(debitCardData)
+// let postalAdressDataObj = arr2obj(postalAdressData)
 
 let dataObj = arr2obj(contactData.concat(debitCardData,postalAdressData))
-console.log(dataObj,"dataObj1")
+// console.log(dataObj,"dataObj1")
 
+// export const Form = ({ res }) => <form onSubmit={onSubmit}></form>;
+
+export const CheckOutDetail = () => {
+    // let [value, onChangeValue]:any = useState()
+    // let count = 1
+    const dispatch = useDispatch()
+    
 
 const renderItem = ({item,title,index}:any) => {
     const onChange = (e:NativeSyntheticEvent<TextInputChangeEventData>):void => {
         const value = e.nativeEvent.text;
-
-        //to match dataObj(keys) to item    
+        
+        // console.log(value)
+        //to match dataObj(keys) to item     
 
         Object.keys(dataObj).forEach((x:any) => {
             if(item == x){
@@ -75,7 +83,9 @@ const renderItem = ({item,title,index}:any) => {
             }
             return dataObj
         })
-        // onChangeValue(dataObj) 
+        
+        // onChangeValue(dataObj)
+        dispatch(inputValidation(dataObj))
     }
 
     return( 
@@ -83,7 +93,7 @@ const renderItem = ({item,title,index}:any) => {
         <InputForm
             placeholder = {item}
             onChange_input = {onChange}
-
+            // onChange_input={(text:any) => onChange(text)}
             //shift the proportion of flex space for that row
             container_style = {[
                 item == "CVC code" ? {flex:0.3} : styles.input_conatiner,
@@ -95,9 +105,6 @@ const renderItem = ({item,title,index}:any) => {
         />
     )
 }
-
-
-
 
 const renderSectionListItem = ({item}:any) => {
     return(
@@ -111,8 +118,6 @@ const renderSectionListItem = ({item}:any) => {
 
     )
 }
-export const CheckOutDetail = () => {
-
     return(
         <View style = {styles.container}>
             <SectionList

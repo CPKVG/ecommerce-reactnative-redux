@@ -1,9 +1,9 @@
 import CheckoutTypes from "./checkout.types";
 
 const INITIAL_STATE = {
-    cartItems:[undefined],//placeholder
+    // cartItems:[undefined],//placeholder
     submitted:false,//placeholder
-    btn_toggle:false,
+    valid:false,
 }
 
 const checkoutReducer = (state = INITIAL_STATE , action:any ) => {
@@ -13,10 +13,15 @@ const checkoutReducer = (state = INITIAL_STATE , action:any ) => {
                 ...state,
                 submitted:action.payload
             }
-            case CheckoutTypes.TOGGLE_BTN:
+            // case CheckoutTypes.TOGGLE_BTN:
+            //     return{
+            //         ...state,
+            //         btn_toggle:action.payload
+            //     }
+            case CheckoutTypes.VALID_INPUT:
                 return{
                     ...state,
-                    btn_toggle:action.payload
+                    valid:action.payload
                 }
             default:
 

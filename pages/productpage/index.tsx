@@ -9,16 +9,12 @@ import { RootState } from '../../redux/rootReducer';
 
 //display selected individual products
 const ProductPage = () => {
-    const productSelector:any = useSelector((state: RootState) => state.product)
-    const fetchProductDetail = productSelector.productDetail
+    // const productSelector:any = useSelector((state: RootState) => state.product)
+    // const fetchProductDetail = productSelector.productDetail
     
     return(
         // {productDetail}
-        <View>
-            <Text>
-            {/* HELLO FROM PRODUCT DETAIL PAGE!! */}
-                </Text>
-           
+        <View>           
             <ProductDetail/>
         </View>
     )

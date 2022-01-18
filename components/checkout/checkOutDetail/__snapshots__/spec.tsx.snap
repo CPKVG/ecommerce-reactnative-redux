@@ -1,0 +1,660 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`checkout detail component render input correctly on start 1`] = `[Function]`;
+
+exports[`checkout detail component renders the sectionList component 1`] = `
+<View>
+  <RCTScrollView
+    data={
+      Array [
+        Object {
+          "data": Array [
+            "dataA1",
+            "dataB1",
+            "dataC1",
+          ],
+          "title": "title1",
+        },
+        Object {
+          "data": Array [
+            "dataA2",
+            "dataB2",
+            "dataC2",
+          ],
+          "title": "title2",
+        },
+        Object {
+          "data": Array [
+            "dataA3",
+            "dataB3",
+            "dataC3",
+          ],
+          "title": "title3",
+        },
+      ]
+    }
+    getItem={[Function]}
+    getItemCount={[Function]}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={
+      Array [
+        0,
+        5,
+      ]
+    }
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <Text>
+          title1
+        </Text>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View>
+          <View
+            data="dataA1"
+            getItem={[Function]}
+            getItemCount={[Function]}
+            keyExtractor={[Function]}
+            onContentSizeChange={[Function]}
+            onLayout={[Function]}
+            onMomentumScrollBegin={[Function]}
+            onMomentumScrollEnd={[Function]}
+            onScroll={[Function]}
+            onScrollBeginDrag={[Function]}
+            onScrollEndDrag={[Function]}
+            removeClippedSubviews={false}
+            renderItem={[Function]}
+            scrollEventThrottle={50}
+            stickyHeaderIndices={Array []}
+            viewabilityConfigCallbackPairs={Array []}
+          >
+            <View
+              onLayout={[Function]}
+              style={null}
+            >
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                  }
+                }
+              >
+                <View>
+                  <TextInput
+                    placeholder="d"
+                  />
+                </View>
+                <View>
+                  <TextInput
+                    placeholder="a"
+                  />
+                </View>
+              </View>
+            </View>
+            <View
+              onLayout={[Function]}
+              style={null}
+            >
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                  }
+                }
+              >
+                <View>
+                  <TextInput
+                    placeholder="t"
+                  />
+                </View>
+                <View>
+                  <TextInput
+                    placeholder="a"
+                  />
+                </View>
+              </View>
+            </View>
+            <View
+              onLayout={[Function]}
+              style={null}
+            >
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                  }
+                }
+              >
+                <View>
+                  <TextInput
+                    placeholder="A"
+                  />
+                </View>
+                <View>
+                  <TextInput
+                    placeholder="1"
+                  />
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View>
+          <View
+            data="dataB1"
+            getItem={[Function]}
+            getItemCount={[Function]}
+            keyExtractor={[Function]}
+            onContentSizeChange={[Function]}
+            onLayout={[Function]}
+            onMomentumScrollBegin={[Function]}
+            onMomentumScrollEnd={[Function]}
+            onScroll={[Function]}
+            onScrollBeginDrag={[Function]}
+            onScrollEndDrag={[Function]}
+            removeClippedSubviews={false}
+            renderItem={[Function]}
+            scrollEventThrottle={50}
+            stickyHeaderIndices={Array []}
+            viewabilityConfigCallbackPairs={Array []}
+          >
+            <View
+              onLayout={[Function]}
+              style={null}
+            >
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                  }
+                }
+              >
+                <View>
+                  <TextInput
+                    placeholder="d"
+                  />
+                </View>
+                <View>
+                  <TextInput
+                    placeholder="a"
+                  />
+                </View>
+              </View>
+            </View>
+            <View
+              onLayout={[Function]}
+              style={null}
+            >
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                  }
+                }
+              >
+                <View>
+                  <TextInput
+                    placeholder="t"
+                  />
+                </View>
+                <View>
+                  <TextInput
+                    placeholder="a"
+                  />
+                </View>
+              </View>
+            </View>
+            <View
+              onLayout={[Function]}
+              style={null}
+            >
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                  }
+                }
+              >
+                <View>
+                  <TextInput
+                    placeholder="B"
+                  />
+                </View>
+                <View>
+                  <TextInput
+                    placeholder="1"
+                  />
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View>
+          <View
+            data="dataC1"
+            getItem={[Function]}
+            getItemCount={[Function]}
+            keyExtractor={[Function]}
+            onContentSizeChange={[Function]}
+            onLayout={[Function]}
+            onMomentumScrollBegin={[Function]}
+            onMomentumScrollEnd={[Function]}
+            onScroll={[Function]}
+            onScrollBeginDrag={[Function]}
+            onScrollEndDrag={[Function]}
+            removeClippedSubviews={false}
+            renderItem={[Function]}
+            scrollEventThrottle={50}
+            stickyHeaderIndices={Array []}
+            viewabilityConfigCallbackPairs={Array []}
+          >
+            <View
+              onLayout={[Function]}
+              style={null}
+            >
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                  }
+                }
+              >
+                <View>
+                  <TextInput
+                    placeholder="d"
+                  />
+                </View>
+                <View>
+                  <TextInput
+                    placeholder="a"
+                  />
+                </View>
+              </View>
+            </View>
+            <View
+              onLayout={[Function]}
+              style={null}
+            >
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                  }
+                }
+              >
+                <View>
+                  <TextInput
+                    placeholder="t"
+                  />
+                </View>
+                <View>
+                  <TextInput
+                    placeholder="a"
+                  />
+                </View>
+              </View>
+            </View>
+            <View
+              onLayout={[Function]}
+              style={null}
+            >
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                  }
+                }
+              >
+                <View>
+                  <TextInput
+                    placeholder="C"
+                  />
+                </View>
+                <View>
+                  <TextInput
+                    placeholder="1"
+                  />
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      />
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <Text>
+          title2
+        </Text>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View>
+          <View
+            data="dataA2"
+            getItem={[Function]}
+            getItemCount={[Function]}
+            keyExtractor={[Function]}
+            onContentSizeChange={[Function]}
+            onLayout={[Function]}
+            onMomentumScrollBegin={[Function]}
+            onMomentumScrollEnd={[Function]}
+            onScroll={[Function]}
+            onScrollBeginDrag={[Function]}
+            onScrollEndDrag={[Function]}
+            removeClippedSubviews={false}
+            renderItem={[Function]}
+            scrollEventThrottle={50}
+            stickyHeaderIndices={Array []}
+            viewabilityConfigCallbackPairs={Array []}
+          >
+            <View
+              onLayout={[Function]}
+              style={null}
+            >
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                  }
+                }
+              >
+                <View>
+                  <TextInput
+                    placeholder="d"
+                  />
+                </View>
+                <View>
+                  <TextInput
+                    placeholder="a"
+                  />
+                </View>
+              </View>
+            </View>
+            <View
+              onLayout={[Function]}
+              style={null}
+            >
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                  }
+                }
+              >
+                <View>
+                  <TextInput
+                    placeholder="t"
+                  />
+                </View>
+                <View>
+                  <TextInput
+                    placeholder="a"
+                  />
+                </View>
+              </View>
+            </View>
+            <View
+              onLayout={[Function]}
+              style={null}
+            >
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                  }
+                }
+              >
+                <View>
+                  <TextInput
+                    placeholder="A"
+                  />
+                </View>
+                <View>
+                  <TextInput
+                    placeholder="2"
+                  />
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View>
+          <View
+            data="dataB2"
+            getItem={[Function]}
+            getItemCount={[Function]}
+            keyExtractor={[Function]}
+            onContentSizeChange={[Function]}
+            onLayout={[Function]}
+            onMomentumScrollBegin={[Function]}
+            onMomentumScrollEnd={[Function]}
+            onScroll={[Function]}
+            onScrollBeginDrag={[Function]}
+            onScrollEndDrag={[Function]}
+            removeClippedSubviews={false}
+            renderItem={[Function]}
+            scrollEventThrottle={50}
+            stickyHeaderIndices={Array []}
+            viewabilityConfigCallbackPairs={Array []}
+          >
+            <View
+              onLayout={[Function]}
+              style={null}
+            >
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                  }
+                }
+              >
+                <View>
+                  <TextInput
+                    placeholder="d"
+                  />
+                </View>
+                <View>
+                  <TextInput
+                    placeholder="a"
+                  />
+                </View>
+              </View>
+            </View>
+            <View
+              onLayout={[Function]}
+              style={null}
+            >
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                  }
+                }
+              >
+                <View>
+                  <TextInput
+                    placeholder="t"
+                  />
+                </View>
+                <View>
+                  <TextInput
+                    placeholder="a"
+                  />
+                </View>
+              </View>
+            </View>
+            <View
+              onLayout={[Function]}
+              style={null}
+            >
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                  }
+                }
+              >
+                <View>
+                  <TextInput
+                    placeholder="B"
+                  />
+                </View>
+                <View>
+                  <TextInput
+                    placeholder="2"
+                  />
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View>
+          <View
+            data="dataC2"
+            getItem={[Function]}
+            getItemCount={[Function]}
+            keyExtractor={[Function]}
+            onContentSizeChange={[Function]}
+            onLayout={[Function]}
+            onMomentumScrollBegin={[Function]}
+            onMomentumScrollEnd={[Function]}
+            onScroll={[Function]}
+            onScrollBeginDrag={[Function]}
+            onScrollEndDrag={[Function]}
+            removeClippedSubviews={false}
+            renderItem={[Function]}
+            scrollEventThrottle={50}
+            stickyHeaderIndices={Array []}
+            viewabilityConfigCallbackPairs={Array []}
+          >
+            <View
+              onLayout={[Function]}
+              style={null}
+            >
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                  }
+                }
+              >
+                <View>
+                  <TextInput
+                    placeholder="d"
+                  />
+                </View>
+                <View>
+                  <TextInput
+                    placeholder="a"
+                  />
+                </View>
+              </View>
+            </View>
+            <View
+              onLayout={[Function]}
+              style={null}
+            >
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                  }
+                }
+              >
+                <View>
+                  <TextInput
+                    placeholder="t"
+                  />
+                </View>
+                <View>
+                  <TextInput
+                    placeholder="a"
+                  />
+                </View>
+              </View>
+            </View>
+            <View
+              onLayout={[Function]}
+              style={null}
+            >
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                  }
+                }
+              >
+                <View>
+                  <TextInput
+                    placeholder="C"
+                  />
+                </View>
+                <View>
+                  <TextInput
+                    placeholder="2"
+                  />
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      />
+      <View
+        style={
+          Object {
+            "height": 0,
+          }
+        }
+      />
+    </View>
+  </RCTScrollView>
+</View>
+`;

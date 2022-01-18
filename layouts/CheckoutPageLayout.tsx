@@ -1,5 +1,5 @@
 import React from 'react'
-import CheckOutUI from '../components/checkout/checkOutUI';
+import CheckOutUI from '../components/checkout/checkoutUI';
 
 import Header from '../components/header';
 
@@ -11,7 +11,7 @@ const CheckoutPageLayout = (props:any) =>{
         <Header title = {"FooCommerce"}/>
         {props.children}
         {/* <Footer/> */}
-        {/* {<CheckOutUI/>} */}
+        {<CheckOutUI/>}
         </>
     )
 

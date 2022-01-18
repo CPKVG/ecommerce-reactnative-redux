@@ -3,7 +3,7 @@ import cartTypes from './cart.types';
 const INITIAL_STATE = {
     cartItems:[undefined],
     // prevCartItems:[undefined],
-    nextCartItem:[""],
+    nextCartItem:""
 }
 
 
