@@ -26,14 +26,30 @@ const cartItem = [
     }
 ]
 
+const faultyCartItem = [
+    {
+        id: "sada",
+        title: "1231241",
+        price: "-1000",
+        description: null,
+        stock: "-100",
+        image: "",
+        category: ""
+    },
+    {
+        count: "-10"
+    }
+]
+
 afterEach(cleanup)
 jest.useFakeTimers()
 
 describe('testing chartDetail component',() => {
-    function mockBtn(getbyparam:string){
+    
+    function mockBtn(getbyparam:string,cartItem:any){
         if (navigationRef.isReady()) {
-            const sentHandler = jest.fn()
-            const { getByText } = render(<NavigationContainer><CartDetail cartItems = {sentHandler}/></NavigationContainer>)
+            const sentHandler = jest.fn(cartItem)
+            const { getByText } = render(<NavigationContainer><CartDetail cartItem = {sentHandler}/></NavigationContainer>)
             const button = getByText(getbyparam)
             fireEvent.press(button)      
             expect(sentHandler).toBeCalledTimes(1)
@@ -43,15 +59,16 @@ describe('testing chartDetail component',() => {
 
     describe("Button should render",()=> {
         it("should increment item by 1",()=>{
-            mockBtn("+")
+            mockBtn("+",cartItem)
         })
         it("should decrement item by 1",()=>{
-            mockBtn("-")
+            mockBtn("-",cartItem)
         })
         it("should delete item",()=>{
-            mockBtn("Delete")
+            mockBtn("Delete",cartItem)
         })
     })
+
 
     describe("ui renders",()=>{
         it("should render item image",()=>{
@@ -83,14 +100,6 @@ describe('testing chartDetail component',() => {
 
         })
 
-        //Snapshot test
-        // describe('renders <App />', () => {
-        //     it('should pass mount snapshot test', () => {
-        //       const wrapper = mount(<CartDetail />);
-        //       expect(wrapper).toMatchSnapshot();
-        //     });
-        //   });
-
      //snapshot test
         test("render input correctly on start", () => {
             if (navigationRef.isReady()) {
@@ -99,12 +108,6 @@ describe('testing chartDetail component',() => {
             }
         })
 
-        // test("render input correctly on start1", () => {
-        //     if (navigationRef.isReady()) {
-        //     const wrapper = shallow(<CartDetail/>)
-        //     expect(wrapper).toMatchSnapshot();
-        //     }
-        // })
 
         it("should render the shopping cart display(in cartDetails)",()=>{
             const BtnScales = ({item,onPress}:any) => (
@@ -115,16 +118,6 @@ describe('testing chartDetail component',() => {
                 </View>
             ) 
 
-            // const renderItem  = ({ item }:any) => {
-            //     // console.log(item.title)
-            //     return (
-            //         <View>
-            //             <Text>
-            //                 {item.title}
-            //             </Text>    
-            //         </View>
-            //       );
-            // }
             const tree = renderer.create(
                 <View>
                 <Text>Shopping Cart</Text>

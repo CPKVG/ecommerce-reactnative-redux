@@ -18,7 +18,10 @@ make sure its dead
 
 Installation
     `https://reactnative.dev/docs/environment-setup`
-dependencies
+dependencies 
+    (if you want to install all dependancies)
+    `npm install`
+
     `npm install -g json-server`
     `npm i react-redux`
     Redux

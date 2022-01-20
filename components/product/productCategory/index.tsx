@@ -11,13 +11,14 @@ import  Carousel from 'react-native-snap-carousel';
 const Item = ({ item, onPress, backgroundColor, textColor }:any) => (
     <TouchableOpacity onPress={onPress} style={[backgroundColor]}>
 
-      <Text style={[styles.category, textColor]}>
+      <Text style={[styles.category, textColor]} testID = "text">
           {item.category}
       </Text>
 
         <Image    
         style = {styles.image}
         source = {ProductImage(item.image)}
+        testID = "image"
         />
     </TouchableOpacity>
   );
@@ -27,11 +28,9 @@ const Item = ({ item, onPress, backgroundColor, textColor }:any) => (
 
 
 //home page category selections
-const ProductCategory = () =>{
+const ProductCategory = ({productSelector}:any) =>{
 
-
-    
-    const productSelector:any = useSelector((state: RootState) => state.product)
+    productSelector = useSelector((state: RootState) => state.product)
 
 
 

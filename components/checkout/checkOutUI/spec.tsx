@@ -10,7 +10,7 @@ import { cleanup, fireEvent } from "@testing-library/react-native";
 import { Text, TouchableOpacity, View } from "react-native";
 import { navigationRef } from "../../../RootNavigation";
 import CheckOutDetail from "../checkoutDetail";
-import { shallow, mount } from 'enzyme';
+// import { shallow, mount } from 'enzyme';
 
 
 afterEach(cleanup)
@@ -80,6 +80,7 @@ describe('testing checkout UI component',() => {
                 
                 fireEvent.press(button)
                 const newScreen = findByText('Thank you for your purchase!')
+                expect(button).toBeTruthy
                 expect(newScreen).toBeTruthy                
             }
     })
@@ -106,17 +107,6 @@ describe('testing checkout UI component',() => {
 
 //NAVIGATION HOOK TODO
 // const mockedDispatch = jest.fn();
-
-
-// jest.mock("@react-navigation/native",() => ({
-//     ...jest.requireActual("@react-navigation/native"),
-//     useNavigation:() => ({goback:jest.fn()}),
-//     useRoute:() =>({
-//         params:{
-//             Purchase:
-//         }
-//     })
-// }))
 
 // test("testing navigation route params",() =>{
 //     const navigation = {navigate:jest.fn()};

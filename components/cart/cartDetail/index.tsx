@@ -10,7 +10,7 @@ const CartDetail = ({cartItems}:any) => {
     
     cartItems = cartSelector.nextCartItem
     
-    console.log(cartItems)
+    // console.log(cartItems)
     const dispatch = useDispatch()
 
     const increment = (item:any) => {
