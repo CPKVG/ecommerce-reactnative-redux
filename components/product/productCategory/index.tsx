@@ -18,7 +18,7 @@ const Item = ({ item, onPress, backgroundColor, textColor }:any) => (
         <Image    
         style = {styles.image}
         source = {ProductImage(item.image)}
-        testID = "image"
+        testID='imageID'
         />
     </TouchableOpacity>
   );
@@ -28,15 +28,21 @@ const Item = ({ item, onPress, backgroundColor, textColor }:any) => (
 
 
 //home page category selections
-const ProductCategory = ({productSelector}:any) =>{
+const ProductCategory = () =>{
 
-    productSelector = useSelector((state: RootState) => state.product)
+   const productSelector:any = useSelector((state: RootState) => state.product)
 
+   let productData:any = ""
+   let productDataSearch:any = ""
+   let productCategorySelect:any = ""
 
+    //type gaurding
+    if(productSelector !== undefined){
+        productData = productSelector.productData
+        productDataSearch = productSelector.productDataSearch
+        productCategorySelect = productSelector.productCategorySelect
+    }
 
-    const productData = productSelector.productData
-    const productDataSearch = productSelector.productDataSearch
-    const productCategorySelect = productSelector.productCategorySelect
    //triggers when user selects a category 
    const dispatch = useDispatch();
 
@@ -88,7 +94,7 @@ const ProductCategory = ({productSelector}:any) =>{
             autoplay={true}
             autoplayDelay={25000}
             autoplayInterval={2500}
-
+            testID='carousel'
             />
         </View>
     //     <View style={{ marginVertical: '5%' }}>
