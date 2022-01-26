@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1643191932689" clover="3.2.0">
-  <project timestamp="1643191932690" name="All files">
-    <metrics statements="322" coveredstatements="172" conditionals="98" coveredconditionals="35" methods="113" coveredmethods="37" elements="533" coveredelements="244" complexity="0" loc="322" ncloc="322" packages="24" files="36" classes="36"/>
+<coverage generated="1643196240487" clover="3.2.0">
+  <project timestamp="1643196240488" name="All files">
+    <metrics statements="328" coveredstatements="184" conditionals="98" coveredconditionals="41" methods="113" coveredmethods="37" elements="539" coveredelements="262" complexity="0" loc="328" ncloc="328" packages="24" files="42" classes="42"/>
     <package name="ecommerce-reactnative-redux">
       <metrics statements="25" coveredstatements="19" conditionals="2" coveredconditionals="0" methods="10" coveredmethods="5"/>
       <file name="App.tsx" path="C:\Users\cpkvg\ecommerce-reactnative-redux\App.tsx">
@@ -40,14 +40,38 @@
       </file>
     </package>
     <package name="ecommerce-reactnative-redux.assests.img">
-      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="Black_t-shirt.png" path="C:\Users\cpkvg\ecommerce-reactnative-redux\assests\img\Black_t-shirt.png">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+      <file name="Kv1.png" path="C:\Users\cpkvg\ecommerce-reactnative-redux\assests\img\Kv1.png">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+      <file name="Laptop.png" path="C:\Users\cpkvg\ecommerce-reactnative-redux\assests\img\Laptop.png">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+      <file name="Potatos.png" path="C:\Users\cpkvg\ecommerce-reactnative-redux\assests\img\Potatos.png">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
       <file name="RTX3080.png" path="C:\Users\cpkvg\ecommerce-reactnative-redux\assests\img\RTX3080.png">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+      </file>
+      <file name="T34-85.png" path="C:\Users\cpkvg\ecommerce-reactnative-redux\assests\img\T34-85.png">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+      <file name="Watties_Beanz.png" path="C:\Users\cpkvg\ecommerce-reactnative-redux\assests\img\Watties_Beanz.png">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
       </file>
       <file name="White_t-shirt.png" path="C:\Users\cpkvg\ecommerce-reactnative-redux\assests\img\White_t-shirt.png">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
+        <line num="1" count="2" type="stmt"/>
       </file>
     </package>
     <package name="ecommerce-reactnative-redux.components.cart.cartDetail">
@@ -204,27 +228,27 @@
       </file>
     </package>
     <package name="ecommerce-reactnative-redux.components.product.productImage">
-      <metrics statements="19" coveredstatements="5" conditionals="8" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <metrics statements="19" coveredstatements="11" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
       <file name="index.tsx" path="C:\Users\cpkvg\ecommerce-reactnative-redux\components\product\productImage\index.tsx">
-        <metrics statements="19" coveredstatements="5" conditionals="8" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="6" count="4" type="stmt"/>
-        <line num="7" count="12" type="stmt"/>
-        <line num="9" count="12" type="cond" truecount="2" falsecount="6"/>
-        <line num="11" count="1" type="stmt"/>
+        <metrics statements="19" coveredstatements="11" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="7" count="20" type="stmt"/>
+        <line num="9" count="20" type="cond" truecount="8" falsecount="0"/>
+        <line num="11" count="2" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
         <line num="21" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
         <line num="24" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
         <line num="27" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
         <line num="30" count="0" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
         <line num="33" count="0" type="stmt"/>
       </file>
     </package>
