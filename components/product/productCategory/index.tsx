@@ -11,7 +11,7 @@ import  Carousel from 'react-native-snap-carousel';
 const Item = ({ item, onPress, backgroundColor, textColor }:any) => (
     <TouchableOpacity onPress={onPress} style={[backgroundColor]}>
 
-      <Text style={[styles.category, textColor]} testID = "text">
+      <Text style={[styles.category, textColor]} testID = "categoryID">
           {item.category}
       </Text>
 

@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`productCategory component renders the productDetail component via snapshot 1`] = `
+<View>
+  <View>
+    <Text>
+      White T-shirt
+    </Text>
+  </View>
+  <View>
+    <Image
+      source={
+        Object {
+          "testUri": "../../../assests/img/White_t-shirt.png",
+        }
+      }
+    />
+  </View>
+  <View>
+    <Text>
+      Description: 
+      Keeps you warm
+    </Text>
+    <Text>
+      Stock: 
+      2
+    </Text>
+    <Text>
+      Price: $
+      5.99
+      nzd
+    </Text>
+  </View>
+</View>
+`;

@@ -1,0 +1,536 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`productCategory component renders the setctionList component 1`] = `
+<View>
+  <RCTScrollView
+    activeAnimationOptions={null}
+    activeAnimationType="timing"
+    activeSlideAlignment="center"
+    activeSlideOffset={20}
+    apparitionDelay={0}
+    automaticallyAdjustContentInsets={false}
+    autoplay={true}
+    autoplayDelay={25000}
+    autoplayInterval={2500}
+    callbackOffsetMargin={5}
+    containerCustomStyle={Object {}}
+    contentContainerCustomStyle={Object {}}
+    contentContainerStyle={
+      Array [
+        Object {
+          "paddingLeft": 137.5,
+          "paddingRight": 137.5,
+        },
+        Object {},
+      ]
+    }
+    data={
+      Array [
+        Object {
+          "category": "data2",
+        },
+        Object {
+          "category": "data1",
+        },
+        Object {
+          "category": "data2",
+        },
+        Object {
+          "category": "data1",
+        },
+        Object {
+          "category": "data2",
+        },
+        Object {
+          "category": "data1",
+        },
+        Object {
+          "category": "data2",
+        },
+        Object {
+          "category": "data1",
+        },
+      ]
+    }
+    decelerationRate="fast"
+    directionalLockEnabled={true}
+    enableMomentum={false}
+    enableSnap={true}
+    firstItem={0}
+    forwardedRef={[Function]}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    hasParallaxImages={false}
+    horizontal={true}
+    inactiveSlideOpacity={0.7}
+    inactiveSlideScale={0.9}
+    inactiveSlideShift={0}
+    initialNumToRender={11}
+    invertStickyHeaders={false}
+    inverted={false}
+    itemWidth={125}
+    keyExtractor={[Function]}
+    layout="default"
+    lockScrollTimeoutDuration={1000}
+    lockScrollWhileSnapping={false}
+    loop={true}
+    loopClonesPerSide={3}
+    maxToRenderPerBatch={23}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onResponderRelease={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    onTouchEnd={[Function]}
+    onTouchStart={[Function]}
+    overScrollMode="never"
+    pinchGestureEnabled={false}
+    removeClippedSubviews={true}
+    renderItem={[Function]}
+    scrollEnabled={true}
+    scrollEventThrottle={1}
+    scrollsToTop={false}
+    shouldOptimizeUpdates={true}
+    showsHorizontalScrollIndicator={false}
+    showsVerticalScrollIndicator={false}
+    slideStyle={Object {}}
+    sliderWidth={400}
+    stickyHeaderIndices={Array []}
+    style={
+      Object {
+        "flexDirection": "row",
+        "opacity": 0,
+        "width": 400,
+      }
+    }
+    swipeThreshold={20}
+    useScrollView={false}
+    vertical={false}
+    viewabilityConfigCallbackPairs={Array []}
+    windowSize={23}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          collapsable={false}
+          nativeID="animatedComponent"
+          pointerEvents="box-none"
+          style={
+            Object {
+              "opacity": 1,
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
+              "width": 125,
+            }
+          }
+        >
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={false}
+            nativeID="animatedComponent"
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <Text>
+              data2
+            </Text>
+            <Image />
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          collapsable={false}
+          nativeID="animatedComponent"
+          pointerEvents="box-none"
+          style={
+            Object {
+              "opacity": 0.7,
+              "transform": Array [
+                Object {
+                  "scale": 0.9,
+                },
+              ],
+              "width": 125,
+            }
+          }
+        >
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={false}
+            nativeID="animatedComponent"
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <Text>
+              data1
+            </Text>
+            <Image />
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          collapsable={false}
+          nativeID="animatedComponent"
+          pointerEvents="box-none"
+          style={
+            Object {
+              "opacity": 0.7,
+              "transform": Array [
+                Object {
+                  "scale": 0.9,
+                },
+              ],
+              "width": 125,
+            }
+          }
+        >
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={false}
+            nativeID="animatedComponent"
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <Text>
+              data2
+            </Text>
+            <Image />
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          collapsable={false}
+          nativeID="animatedComponent"
+          pointerEvents="box-none"
+          style={
+            Object {
+              "opacity": 0.7,
+              "transform": Array [
+                Object {
+                  "scale": 0.9,
+                },
+              ],
+              "width": 125,
+            }
+          }
+        >
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={false}
+            nativeID="animatedComponent"
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <Text>
+              data1
+            </Text>
+            <Image />
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          collapsable={false}
+          nativeID="animatedComponent"
+          pointerEvents="box-none"
+          style={
+            Object {
+              "opacity": 0.7,
+              "transform": Array [
+                Object {
+                  "scale": 0.9,
+                },
+              ],
+              "width": 125,
+            }
+          }
+        >
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={false}
+            nativeID="animatedComponent"
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <Text>
+              data2
+            </Text>
+            <Image />
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          collapsable={false}
+          nativeID="animatedComponent"
+          pointerEvents="box-none"
+          style={
+            Object {
+              "opacity": 0.7,
+              "transform": Array [
+                Object {
+                  "scale": 0.9,
+                },
+              ],
+              "width": 125,
+            }
+          }
+        >
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={false}
+            nativeID="animatedComponent"
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <Text>
+              data1
+            </Text>
+            <Image />
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          collapsable={false}
+          nativeID="animatedComponent"
+          pointerEvents="box-none"
+          style={
+            Object {
+              "opacity": 0.7,
+              "transform": Array [
+                Object {
+                  "scale": 0.9,
+                },
+              ],
+              "width": 125,
+            }
+          }
+        >
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={false}
+            nativeID="animatedComponent"
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <Text>
+              data2
+            </Text>
+            <Image />
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          collapsable={false}
+          nativeID="animatedComponent"
+          pointerEvents="box-none"
+          style={
+            Object {
+              "opacity": 0.7,
+              "transform": Array [
+                Object {
+                  "scale": 0.9,
+                },
+              ],
+              "width": 125,
+            }
+          }
+        >
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={false}
+            nativeID="animatedComponent"
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <Text>
+              data1
+            </Text>
+            <Image />
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

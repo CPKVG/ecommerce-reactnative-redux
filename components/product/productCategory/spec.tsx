@@ -5,12 +5,7 @@ import { render, store } from "../../../test-utils";
 import ProductCategory from ".";
 import { cleanup, fireEvent } from "@testing-library/react-native";
 import { Image, Text, TouchableOpacity, View } from "react-native";
-import { navigationRef } from "../../../RootNavigation";
 
-import {Provider} from 'react-redux'
-import thunk from 'redux-thunk';
-
-import configureStore from 'redux-mock-store'
 import Carousel from "react-native-snap-carousel";
 import renderer from "react-test-renderer"
 import ProductImage from "../productImage";
@@ -19,24 +14,8 @@ import ProductImage from "../productImage";
 jest.useFakeTimers()
 
 afterEach(cleanup)
-const mockStore = configureStore([thunk])
 
 describe('productCategory component', () => {
-    // const store = mockStore({
-    //     productSelector: {
-    //         product: [''],
-    //         loading:true,
-    //         productData:'',
-    //         productDataSearch:[undefined],
-    //         productCategorySelect:"",
-    //       },
-    //   });
-
-    // const component = render(
-    //   <Provider store={store}>
-    //     <ProductCategory />
-    //   </Provider>,
-    // )
     const component = (
         <NavigationContainer>
             <ProductCategory/>
@@ -55,6 +34,7 @@ describe('productCategory component', () => {
     
     expect(imageBtn).toBeTruthy
   })
+
 
 it("renders the setctionList component",()=> {
     const data = [{"category":"data1"},{"category":"data2"}]

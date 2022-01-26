@@ -22,7 +22,12 @@ const CheckoutUI = ({validCheckoutInput}:any) => {
     }
 
     const checkoutSelector:any = useSelector((state: RootState) => state.checkout)
-    validCheckoutInput = checkoutSelector.valid
+    validCheckoutInput = ""
+
+    if(checkoutSelector !== undefined){
+        validCheckoutInput = checkoutSelector.valid
+    }
+
     
     // validCheckoutInput = false
     console.log(validCheckoutInput)

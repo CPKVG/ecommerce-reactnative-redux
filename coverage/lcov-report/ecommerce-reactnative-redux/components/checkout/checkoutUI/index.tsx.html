@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">16.66% </span>
+                <span class="strong">78.57% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/12</span>
+                <span class='fraction'>11/14</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>2/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">18.18% </span>
+                <span class="strong">76.92% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/11</span>
+                <span class='fraction'>10/13</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -130,7 +130,12 @@
 <a name='L71'></a><a href='#L71'>71</a>
 <a name='L72'></a><a href='#L72'>72</a>
 <a name='L73'></a><a href='#L73'>73</a>
-<a name='L74'></a><a href='#L74'>74</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -145,20 +150,25 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -217,23 +227,28 @@ import { RootState } from "../../../redux/rootReducer"
 &nbsp;
 type PurchaseScreenProp = NativeStackNavigationProp&lt;RootStackParamList, 'Purchase'&gt;;
 &nbsp;
-const CheckoutUI = <span class="fstat-no" title="function not covered" >({</span>validCheckoutInput}:any) =&gt; {
-    const navigation = <span class="cstat-no" title="statement not covered" >useNavigation&lt;PurchaseScreenProp&gt;();</span>
-    const dispatch = <span class="cstat-no" title="statement not covered" >useDispatch()</span>
+const CheckoutUI = ({validCheckoutInput}:any) =&gt; {
+    const navigation = useNavigation&lt;PurchaseScreenProp&gt;();
+    const dispatch = useDispatch()
     
-    const handleCheckOut = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(n</span>avigation: PurchaseScreenProp) =&gt; {</span>
+    const handleCheckOut = <span class="fstat-no" title="function not covered" >(n</span>avigation: PurchaseScreenProp) =&gt; {
 <span class="cstat-no" title="statement not covered" >       navigation.navigate('Purchase')</span>
         // dispatch(submitCart())
     }
 &nbsp;
-    const checkoutSelector:any = <span class="cstat-no" title="statement not covered" >useSelector(<span class="fstat-no" title="function not covered" >(s</span>tate: RootState) =&gt; <span class="cstat-no" title="statement not covered" >state.checkout)</span></span>
-<span class="cstat-no" title="statement not covered" >    validCheckoutInput = checkoutSelector.valid</span>
+    const checkoutSelector:any = useSelector((state: RootState) =&gt; state.checkout)
+    validCheckoutInput = ""
+&nbsp;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if(checkoutSelector !== undefined){
+<span class="cstat-no" title="statement not covered" >        validCheckoutInput = checkoutSelector.valid</span>
+    }
+&nbsp;
     
     // validCheckoutInput = false
-<span class="cstat-no" title="statement not covered" >    console.log(validCheckoutInput)</span>
-<span class="cstat-no" title="statement not covered" >    return(</span>
+    console.log(validCheckoutInput)
+    return(
         validCheckoutInput ? 
-            &lt;View style = {styles.container}&gt;            
+<span class="branch-0 cbranch-no" title="branch not covered" >            &lt;View style = {styles.container}&gt;            </span>
                 &lt;TouchableOpacity testID = {"btn"}
                     style = {styles.Btn}
                     onPress ={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >handleCheckOut(navigation)}</span>
@@ -283,7 +298,7 @@ export default CheckoutUI</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Tue Jan 25 2022 18:32:50 GMT+1300 (New Zealand Daylight Time)
+                at Wed Jan 26 2022 11:06:38 GMT+1300 (New Zealand Daylight Time)
             </div>
         </div>
         <script src="../../../../prettify.js"></script>
