@@ -6,9 +6,10 @@ import ProductImage from "../productImage"
 
 
 
-export const ProductDetail = ({fetchProductDetail}:any) =>{
+export const ProductDetail = () =>{
     const productSelector:any = useSelector((state: RootState) => state.product)
-
+    console.log(JSON.stringify(productSelector))
+    let fetchProductDetail:any = ""
     if(productSelector !== undefined){
         fetchProductDetail = productSelector.productDetail
     }
@@ -16,20 +17,21 @@ export const ProductDetail = ({fetchProductDetail}:any) =>{
   return (
       <View style = {styles.container}>
         <View style = {styles.title_container}>
-            <Text style = {styles.title} testID="titleID">{fetchProductDetail.title}</Text>
-        </View>
+            <Text style = {styles.title} testID ="titleID">{fetchProductDetail.title}</Text>
+        </View>     
           <View style ={styles.image_container}>
             <Image 
-            testID="imageID"
             style = {styles.image}
-            source = {ProductImage(fetchProductDetail.image)}/>
+            source = {ProductImage(fetchProductDetail.image)}
+            testID="imageID"
+            />
             
           </View>
 
         <View style = {styles.text_container}> 
-            <Text style = {styles.text} testID="DescriptionID">Description: {fetchProductDetail.description}</Text>
-            <Text style = {styles.text} testID="StockID">Stock: {fetchProductDetail.stock}</Text>
-            <Text style = {styles.text} testID="PriceID">Price: ${fetchProductDetail.price}nzd</Text>
+            <Text style = {styles.text} testID="descID">Description: {fetchProductDetail.description}</Text>
+            <Text style = {styles.text} testID="stockID">Stock: {fetchProductDetail.stock}</Text>
+            <Text style = {styles.text} testID="priceID">Price: ${fetchProductDetail.price}nzd</Text>
         </View>
 
 

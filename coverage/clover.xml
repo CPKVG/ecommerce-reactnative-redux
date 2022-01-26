@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1643148398466" clover="3.2.0">
-  <project timestamp="1643148398466" name="All files">
-    <metrics statements="320" coveredstatements="170" conditionals="98" coveredconditionals="35" methods="113" coveredmethods="37" elements="531" coveredelements="242" complexity="0" loc="320" ncloc="320" packages="24" files="36" classes="36"/>
+<coverage generated="1643191932689" clover="3.2.0">
+  <project timestamp="1643191932690" name="All files">
+    <metrics statements="322" coveredstatements="172" conditionals="98" coveredconditionals="35" methods="113" coveredmethods="37" elements="533" coveredelements="244" complexity="0" loc="322" ncloc="322" packages="24" files="36" classes="36"/>
     <package name="ecommerce-reactnative-redux">
       <metrics statements="25" coveredstatements="19" conditionals="2" coveredconditionals="0" methods="10" coveredmethods="5"/>
-      <file name="App.tsx" path="C:\Users\chris\ecommerce-reactnative-redux\App.tsx">
+      <file name="App.tsx" path="C:\Users\cpkvg\ecommerce-reactnative-redux\App.tsx">
         <metrics statements="15" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="3"/>
         <line num="54" count="1" type="stmt"/>
         <line num="56" count="1" type="stmt"/>
@@ -22,13 +22,13 @@
         <line num="118" count="1" type="stmt"/>
         <line num="142" count="1" type="stmt"/>
       </file>
-      <file name="RootNavigation.js" path="C:\Users\chris\ecommerce-reactnative-redux\RootNavigation.js">
+      <file name="RootNavigation.js" path="C:\Users\cpkvg\ecommerce-reactnative-redux\RootNavigation.js">
         <metrics statements="3" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="11" count="5" type="stmt"/>
         <line num="14" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="15" count="0" type="stmt"/>
       </file>
-      <file name="test-utils.js" path="C:\Users\chris\ecommerce-reactnative-redux\test-utils.js">
+      <file name="test-utils.js" path="C:\Users\cpkvg\ecommerce-reactnative-redux\test-utils.js">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="42" count="6" type="stmt"/>
         <line num="43" count="6" type="stmt"/>
@@ -41,18 +41,18 @@
     </package>
     <package name="ecommerce-reactnative-redux.assests.img">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="RTX3080.png" path="C:\Users\chris\ecommerce-reactnative-redux\assests\img\RTX3080.png">
+      <file name="RTX3080.png" path="C:\Users\cpkvg\ecommerce-reactnative-redux\assests\img\RTX3080.png">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
       </file>
-      <file name="White_t-shirt.png" path="C:\Users\chris\ecommerce-reactnative-redux\assests\img\White_t-shirt.png">
+      <file name="White_t-shirt.png" path="C:\Users\cpkvg\ecommerce-reactnative-redux\assests\img\White_t-shirt.png">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
       </file>
     </package>
     <package name="ecommerce-reactnative-redux.components.cart.cartDetail">
       <metrics statements="20" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="11" coveredmethods="0"/>
-      <file name="index.tsx" path="C:\Users\chris\ecommerce-reactnative-redux\components\cart\cartDetail\index.tsx">
+      <file name="index.tsx" path="C:\Users\cpkvg\ecommerce-reactnative-redux\components\cart\cartDetail\index.tsx">
         <metrics statements="20" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="11" coveredmethods="0"/>
         <line num="8" count="2" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
@@ -78,7 +78,7 @@
     </package>
     <package name="ecommerce-reactnative-redux.components.cart.cartUI">
       <metrics statements="7" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
-      <file name="index.tsx" path="C:\Users\chris\ecommerce-reactnative-redux\components\cart\cartUI\index.tsx">
+      <file name="index.tsx" path="C:\Users\cpkvg\ecommerce-reactnative-redux\components\cart\cartUI\index.tsx">
         <metrics statements="7" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="14" count="2" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
@@ -89,9 +89,9 @@
         <line num="38" count="2" type="stmt"/>
       </file>
     </package>
-    <package name="ecommerce-reactnative-redux.components.checkout.checkOutDetail">
+    <package name="ecommerce-reactnative-redux.components.checkout.checkoutDetail">
       <metrics statements="28" coveredstatements="22" conditionals="10" coveredconditionals="8" methods="9" coveredmethods="7"/>
-      <file name="index.tsx" path="C:\Users\chris\ecommerce-reactnative-redux\components\checkout\checkOutDetail\index.tsx">
+      <file name="index.tsx" path="C:\Users\cpkvg\ecommerce-reactnative-redux\components\checkout\checkoutDetail\index.tsx">
         <metrics statements="28" coveredstatements="22" conditionals="10" coveredconditionals="8" methods="9" coveredmethods="7"/>
         <line num="7" count="3" type="stmt"/>
         <line num="8" count="33" type="stmt"/>
@@ -123,9 +123,9 @@
         <line num="138" count="3" type="stmt"/>
       </file>
     </package>
-    <package name="ecommerce-reactnative-redux.components.checkout.checkOutUI">
+    <package name="ecommerce-reactnative-redux.components.checkout.checkoutUI">
       <metrics statements="13" coveredstatements="10" conditionals="4" coveredconditionals="2" methods="4" coveredmethods="2"/>
-      <file name="index.tsx" path="C:\Users\chris\ecommerce-reactnative-redux\components\checkout\checkOutUI\index.tsx">
+      <file name="index.tsx" path="C:\Users\cpkvg\ecommerce-reactnative-redux\components\checkout\checkoutUI\index.tsx">
         <metrics statements="13" coveredstatements="10" conditionals="4" coveredconditionals="2" methods="4" coveredmethods="2"/>
         <line num="15" count="2" type="stmt"/>
         <line num="16" count="2" type="stmt"/>
@@ -144,7 +144,7 @@
     </package>
     <package name="ecommerce-reactnative-redux.components.header">
       <metrics statements="10" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
-      <file name="index.tsx" path="C:\Users\chris\ecommerce-reactnative-redux\components\header\index.tsx">
+      <file name="index.tsx" path="C:\Users\cpkvg\ecommerce-reactnative-redux\components\header\index.tsx">
         <metrics statements="10" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
         <line num="17" count="1" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
@@ -159,20 +159,22 @@
       </file>
     </package>
     <package name="ecommerce-reactnative-redux.components.product.ProductDetail">
-      <metrics statements="6" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
-      <file name="index.tsx" path="C:\Users\chris\ecommerce-reactnative-redux\components\product\ProductDetail\index.tsx">
-        <metrics statements="6" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
+      <metrics statements="8" coveredstatements="7" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
+      <file name="index.tsx" path="C:\Users\cpkvg\ecommerce-reactnative-redux\components\product\ProductDetail\index.tsx">
+        <metrics statements="8" coveredstatements="7" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
         <line num="9" count="2" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
-        <line num="12" count="1" type="cond" truecount="1" falsecount="1"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="41" count="2" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="43" count="2" type="stmt"/>
       </file>
     </package>
     <package name="ecommerce-reactnative-redux.components.product.productCategory">
       <metrics statements="25" coveredstatements="19" conditionals="10" coveredconditionals="9" methods="9" coveredmethods="3"/>
-      <file name="index.tsx" path="C:\Users\chris\ecommerce-reactnative-redux\components\product\productCategory\index.tsx">
+      <file name="index.tsx" path="C:\Users\cpkvg\ecommerce-reactnative-redux\components\product\productCategory\index.tsx">
         <metrics statements="25" coveredstatements="19" conditionals="10" coveredconditionals="9" methods="9" coveredmethods="3"/>
         <line num="11" count="2" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
@@ -203,7 +205,7 @@
     </package>
     <package name="ecommerce-reactnative-redux.components.product.productImage">
       <metrics statements="19" coveredstatements="5" conditionals="8" coveredconditionals="2" methods="1" coveredmethods="1"/>
-      <file name="index.tsx" path="C:\Users\chris\ecommerce-reactnative-redux\components\product\productImage\index.tsx">
+      <file name="index.tsx" path="C:\Users\cpkvg\ecommerce-reactnative-redux\components\product\productImage\index.tsx">
         <metrics statements="19" coveredstatements="5" conditionals="8" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="6" count="4" type="stmt"/>
         <line num="7" count="12" type="stmt"/>
@@ -228,7 +230,7 @@
     </package>
     <package name="ecommerce-reactnative-redux.components.product.productResult">
       <metrics statements="12" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="2"/>
-      <file name="index.tsx" path="C:\Users\chris\ecommerce-reactnative-redux\components\product\productResult\index.tsx">
+      <file name="index.tsx" path="C:\Users\cpkvg\ecommerce-reactnative-redux\components\product\productResult\index.tsx">
         <metrics statements="12" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="2"/>
         <line num="13" count="1" type="stmt"/>
         <line num="15" count="2" type="stmt"/>
@@ -246,7 +248,7 @@
     </package>
     <package name="ecommerce-reactnative-redux.components.product.productUI">
       <metrics statements="19" coveredstatements="2" conditionals="4" coveredconditionals="0" methods="8" coveredmethods="0"/>
-      <file name="index.tsx" path="C:\Users\chris\ecommerce-reactnative-redux\components\product\productUI\index.tsx">
+      <file name="index.tsx" path="C:\Users\cpkvg\ecommerce-reactnative-redux\components\product\productUI\index.tsx">
         <metrics statements="19" coveredstatements="2" conditionals="4" coveredconditionals="0" methods="8" coveredmethods="0"/>
         <line num="14" count="1" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
@@ -271,7 +273,7 @@
     </package>
     <package name="ecommerce-reactnative-redux.components.purchase.purchaseDetails">
       <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="index.tsx" path="C:\Users\chris\ecommerce-reactnative-redux\components\purchase\purchaseDetails\index.tsx">
+      <file name="index.tsx" path="C:\Users\cpkvg\ecommerce-reactnative-redux\components\purchase\purchaseDetails\index.tsx">
         <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="4" count="1" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
@@ -280,7 +282,7 @@
     </package>
     <package name="ecommerce-reactnative-redux.components.search">
       <metrics statements="12" coveredstatements="10" conditionals="6" coveredconditionals="1" methods="4" coveredmethods="3"/>
-      <file name="index.tsx" path="C:\Users\chris\ecommerce-reactnative-redux\components\search\index.tsx">
+      <file name="index.tsx" path="C:\Users\cpkvg\ecommerce-reactnative-redux\components\search\index.tsx">
         <metrics statements="12" coveredstatements="10" conditionals="6" coveredconditionals="1" methods="4" coveredmethods="3"/>
         <line num="11" count="1" type="stmt"/>
         <line num="12" count="2" type="stmt"/>
@@ -298,17 +300,17 @@
     </package>
     <package name="ecommerce-reactnative-redux.layouts">
       <metrics statements="6" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
-      <file name="CheckoutPageLayout.tsx" path="C:\Users\chris\ecommerce-reactnative-redux\layouts\CheckoutPageLayout.tsx">
+      <file name="CheckoutPageLayout.tsx" path="C:\Users\cpkvg\ecommerce-reactnative-redux\layouts\CheckoutPageLayout.tsx">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="8" count="1" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
       </file>
-      <file name="HomePageLayout.tsx" path="C:\Users\chris\ecommerce-reactnative-redux\layouts\HomePageLayout.tsx">
+      <file name="HomePageLayout.tsx" path="C:\Users\cpkvg\ecommerce-reactnative-redux\layouts\HomePageLayout.tsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="7" count="1" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
       </file>
-      <file name="ProductPageLayout.tsx" path="C:\Users\chris\ecommerce-reactnative-redux\layouts\ProductPageLayout.tsx">
+      <file name="ProductPageLayout.tsx" path="C:\Users\cpkvg\ecommerce-reactnative-redux\layouts\ProductPageLayout.tsx">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
@@ -316,7 +318,7 @@
     </package>
     <package name="ecommerce-reactnative-redux.pages.cartpage">
       <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="index.tsx" path="C:\Users\chris\ecommerce-reactnative-redux\pages\cartpage\index.tsx">
+      <file name="index.tsx" path="C:\Users\cpkvg\ecommerce-reactnative-redux\pages\cartpage\index.tsx">
         <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="5" count="1" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
@@ -325,7 +327,7 @@
     </package>
     <package name="ecommerce-reactnative-redux.pages.checkoutpage">
       <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="index.tsx" path="C:\Users\chris\ecommerce-reactnative-redux\pages\checkoutpage\index.tsx">
+      <file name="index.tsx" path="C:\Users\cpkvg\ecommerce-reactnative-redux\pages\checkoutpage\index.tsx">
         <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
@@ -334,7 +336,7 @@
     </package>
     <package name="ecommerce-reactnative-redux.pages.homepage">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="index.tsx" path="C:\Users\chris\ecommerce-reactnative-redux\pages\homepage\index.tsx">
+      <file name="index.tsx" path="C:\Users\cpkvg\ecommerce-reactnative-redux\pages\homepage\index.tsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="9" count="1" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
@@ -343,7 +345,7 @@
     </package>
     <package name="ecommerce-reactnative-redux.pages.productpage">
       <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="index.tsx" path="C:\Users\chris\ecommerce-reactnative-redux\pages\productpage\index.tsx">
+      <file name="index.tsx" path="C:\Users\cpkvg\ecommerce-reactnative-redux\pages\productpage\index.tsx">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="11" count="1" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
@@ -351,7 +353,7 @@
     </package>
     <package name="ecommerce-reactnative-redux.pages.purchasepage">
       <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="index.tsx" path="C:\Users\chris\ecommerce-reactnative-redux\pages\purchasepage\index.tsx">
+      <file name="index.tsx" path="C:\Users\cpkvg\ecommerce-reactnative-redux\pages\purchasepage\index.tsx">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
@@ -359,13 +361,13 @@
     </package>
     <package name="ecommerce-reactnative-redux.redux">
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="createStore.tsx" path="C:\Users\chris\ecommerce-reactnative-redux\redux\createStore.tsx">
+      <file name="createStore.tsx" path="C:\Users\cpkvg\ecommerce-reactnative-redux\redux\createStore.tsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="11" count="1" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
       </file>
-      <file name="rootReducer.tsx" path="C:\Users\chris\ecommerce-reactnative-redux\redux\rootReducer.tsx">
+      <file name="rootReducer.tsx" path="C:\Users\cpkvg\ecommerce-reactnative-redux\redux\rootReducer.tsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="12" count="7" type="stmt"/>
         <line num="23" count="7" type="stmt"/>
@@ -373,7 +375,7 @@
     </package>
     <package name="ecommerce-reactnative-redux.redux.Cart">
       <metrics statements="34" coveredstatements="10" conditionals="15" coveredconditionals="2" methods="13" coveredmethods="1"/>
-      <file name="cart.action.tsx" path="C:\Users\chris\ecommerce-reactnative-redux\redux\Cart\cart.action.tsx">
+      <file name="cart.action.tsx" path="C:\Users\cpkvg\ecommerce-reactnative-redux\redux\Cart\cart.action.tsx">
         <metrics statements="28" coveredstatements="5" conditionals="12" coveredconditionals="0" methods="12" coveredmethods="0"/>
         <line num="4" count="2" type="stmt"/>
         <line num="5" count="2" type="stmt"/>
@@ -404,7 +406,7 @@
         <line num="87" count="0" type="stmt"/>
         <line num="92" count="0" type="stmt"/>
       </file>
-      <file name="cart.reducer.tsx" path="C:\Users\chris\ecommerce-reactnative-redux\redux\Cart\cart.reducer.tsx">
+      <file name="cart.reducer.tsx" path="C:\Users\cpkvg\ecommerce-reactnative-redux\redux\Cart\cart.reducer.tsx">
         <metrics statements="5" coveredstatements="4" conditionals="3" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="3" count="7" type="stmt"/>
         <line num="10" count="7" type="cond" truecount="1" falsecount="0"/>
@@ -412,14 +414,14 @@
         <line num="13" count="0" type="stmt"/>
         <line num="20" count="20" type="stmt"/>
       </file>
-      <file name="cart.types.tsx" path="C:\Users\chris\ecommerce-reactnative-redux\redux\Cart\cart.types.tsx">
+      <file name="cart.types.tsx" path="C:\Users\cpkvg\ecommerce-reactnative-redux\redux\Cart\cart.types.tsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="7" type="stmt"/>
       </file>
     </package>
     <package name="ecommerce-reactnative-redux.redux.Checkout">
       <metrics statements="26" coveredstatements="8" conditionals="21" coveredconditionals="2" methods="10" coveredmethods="1"/>
-      <file name="checkout.action.tsx" path="C:\Users\chris\ecommerce-reactnative-redux\redux\Checkout\checkout.action.tsx">
+      <file name="checkout.action.tsx" path="C:\Users\cpkvg\ecommerce-reactnative-redux\redux\Checkout\checkout.action.tsx">
         <metrics statements="19" coveredstatements="3" conditionals="17" coveredconditionals="0" methods="9" coveredmethods="0"/>
         <line num="4" count="3" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
@@ -441,7 +443,7 @@
         <line num="76" count="0" type="stmt"/>
         <line num="93" count="3" type="stmt"/>
       </file>
-      <file name="checkout.reducer.tsx" path="C:\Users\chris\ecommerce-reactnative-redux\redux\Checkout\checkout.reducer.tsx">
+      <file name="checkout.reducer.tsx" path="C:\Users\cpkvg\ecommerce-reactnative-redux\redux\Checkout\checkout.reducer.tsx">
         <metrics statements="6" coveredstatements="4" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="3" count="7" type="stmt"/>
         <line num="9" count="7" type="cond" truecount="1" falsecount="0"/>
@@ -450,14 +452,14 @@
         <line num="22" count="0" type="stmt"/>
         <line num="28" count="20" type="stmt"/>
       </file>
-      <file name="checkout.types.tsx" path="C:\Users\chris\ecommerce-reactnative-redux\redux\Checkout\checkout.types.tsx">
+      <file name="checkout.types.tsx" path="C:\Users\cpkvg\ecommerce-reactnative-redux\redux\Checkout\checkout.types.tsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="7" type="stmt"/>
       </file>
     </package>
     <package name="ecommerce-reactnative-redux.redux.Product">
       <metrics statements="35" coveredstatements="20" conditionals="14" coveredconditionals="8" methods="11" coveredmethods="7"/>
-      <file name="product.action.tsx" path="C:\Users\chris\ecommerce-reactnative-redux\redux\Product\product.action.tsx">
+      <file name="product.action.tsx" path="C:\Users\cpkvg\ecommerce-reactnative-redux\redux\Product\product.action.tsx">
         <metrics statements="26" coveredstatements="13" conditionals="8" coveredconditionals="4" methods="10" coveredmethods="6"/>
         <line num="5" count="2" type="stmt"/>
         <line num="6" count="2" type="stmt"/>
@@ -486,7 +488,7 @@
         <line num="81" count="0" type="stmt"/>
         <line num="89" count="2" type="stmt"/>
       </file>
-      <file name="product.reducer.tsx" path="C:\Users\chris\ecommerce-reactnative-redux\redux\Product\product.reducer.tsx">
+      <file name="product.reducer.tsx" path="C:\Users\cpkvg\ecommerce-reactnative-redux\redux\Product\product.reducer.tsx">
         <metrics statements="8" coveredstatements="6" conditionals="6" coveredconditionals="4" methods="1" coveredmethods="1"/>
         <line num="3" count="7" type="stmt"/>
         <line num="12" count="7" type="cond" truecount="1" falsecount="0"/>
@@ -497,7 +499,7 @@
         <line num="41" count="0" type="stmt"/>
         <line num="47" count="18" type="stmt"/>
       </file>
-      <file name="product.types.tsx" path="C:\Users\chris\ecommerce-reactnative-redux\redux\Product\product.types.tsx">
+      <file name="product.types.tsx" path="C:\Users\cpkvg\ecommerce-reactnative-redux\redux\Product\product.types.tsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="7" type="stmt"/>
       </file>
