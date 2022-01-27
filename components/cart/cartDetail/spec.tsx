@@ -45,39 +45,59 @@ afterEach(cleanup)
 jest.useFakeTimers()
 
 describe('testing chartDetail component',() => {
-    
-    function mockBtn(getbyparam:string,cartItem:any){
-        if (navigationRef.isReady()) {
-            const sentHandler = jest.fn(cartItem)
-            const { getByText } = render(<NavigationContainer><CartDetail cartItem = {sentHandler}/></NavigationContainer>)
-            const button = getByText(getbyparam)
-            fireEvent.press(button)      
-            expect(sentHandler).toBeCalledTimes(1)
-            expect(sentHandler).toBeTruthy()   
-            }
-    }
 
-    describe("Button should render",()=> {
-        it("should increment item by 1",()=>{
-            mockBtn("+",cartItem)
-        })
-        it("should decrement item by 1",()=>{
-            mockBtn("-",cartItem)
-        })
-        it("should delete item",()=>{
-            mockBtn("Delete",cartItem)
-        })
-    })
+    test('renders a list of items', async () => {
+        fetch.mockResponseOnce(
+          JSON.stringify([
+            { id: 1, title: '1' },
+            { id: 2, title: '2' },
+          ])
+        );
+        const { queryByTestId, getByTestId } = render(<CartDetail />);
+    
+        expect(queryByTestId('post-row-0')).toBeNull();
+    
+        await waitForElement(() => {
+          return queryByTestId('post-row-0');
+        });
+    
+        expect(getByTestId('post-row-0'));
+      });
+
+
+
+
+    
+    // //shallow rendering to fetch out text from flatlist or remove from test
+    // function mockBtn(getbyparam:string,cartItem:any){
+    //         const sentHandler = jest.fn(cartItem)
+    //         const { getByText } = render(<NavigationContainer><CartDetail cartItem = {sentHandler}/></NavigationContainer>)
+    //         const button = getByText(getbyparam)
+    //         fireEvent.press(button)      
+    //         expect(sentHandler).toBeCalledTimes(1)
+    //         expect(sentHandler).toBeTruthy()   
+    // }
+
+    // describe("Button should render",()=> {
+    //     it("should increment item by 1",()=>{
+    //         mockBtn("+",cartItem)
+    //     })
+    //     it("should decrement item by 1",()=>{
+    //         mockBtn("-",cartItem)
+    //     })
+    //     it("should delete item",()=>{
+    //         mockBtn("Delete",cartItem)
+    //     })
+    // })
 
 
     describe("ui renders",()=>{
         it("should render item image",()=>{
-            if (navigationRef.isReady()) {   
                 const { getByTestId } = render(<NavigationContainer><CartDetail/></NavigationContainer>)
 
                 expect(getByTestId("Potatos")).toBeTruthy
                 expect( getByTestId ).toBeCalled
-            }   
+            
         })
         it("should render buttons",()=>{
             if (navigationRef.isReady()) {   
@@ -101,12 +121,12 @@ describe('testing chartDetail component',() => {
         })
 
      //snapshot test
-        test("render input correctly on start", () => {
-            if (navigationRef.isReady()) {
-                const tree = render(<CartDetail/>).toJSON
-                expect(tree).toMatchSnapshot();
-            }
-        })
+        // test("render input correctly on start", () => {
+        //     if (navigationRef.isReady()) {
+        //         const tree = render(<CartDetail/>).toJSON
+        //         expect(tree).toMatchSnapshot();
+        //     }
+        // })
 
 
         it("should render the shopping cart display(in cartDetails)",()=>{

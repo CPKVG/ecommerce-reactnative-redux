@@ -7,8 +7,11 @@ import ProductImage from "../../product/productImage"
 
 const CartDetail = ({cartItems}:any) => {
     const cartSelector:any = useSelector((state: RootState) => state.cart)
-    
-    cartItems = cartSelector.nextCartItem
+     
+    if(cartSelector !== undefined){
+        cartItems = cartSelector.nextCartItem
+    }
+
     
     // console.log(cartItems)
     const dispatch = useDispatch()

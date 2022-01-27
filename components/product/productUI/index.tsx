@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { RootStackParamList } from "../../../App"
 import { addProduct } from "../../../redux/Cart/cart.action"
 import { RootState } from "../../../redux/rootReducer"
+import { navigationRef } from "../../../RootNavigation"
 
 
 
@@ -15,10 +16,18 @@ const ProductUI = () => {
     const dispatch = useDispatch()
 
     const productSelector:any = useSelector((state: RootState) => state.product)
-    let productDetail = productSelector.productDetail
+    let productDetail:any = ""
+    if(productSelector !== undefined){
+        productDetail = productSelector.productDetail
+    }
 
 
     const cartSelector:any = useSelector((state:RootState) => state.cart)
+    let nextCartItem:any = ""
+    if(cartSelector !== undefined){
+        nextCartItem = cartSelector.nextCartItem
+    }
+
 
     const handleAddToCart = () =>{
         dispatch(addProduct(productDetail))
@@ -28,13 +37,15 @@ const ProductUI = () => {
 
     const handleCheckOut = (navigation: cartScreenProp) => {
         //redirect to cart page
+        if (navigationRef.isReady()) {
         navigation.navigate('Cart')// checkout page not cart,
+        }
     }
     let count = 0
 
     //fetching count status from actions
-    if(cartSelector.nextCartItem !=- ""){
-        cartSelector.nextCartItem.forEach((x:any)=>{
+    if(nextCartItem !== ""){
+        nextCartItem.forEach((x:any)=>{
 
             if(productDetail.id == x[0].id){
                 return (count = x[1].count)
@@ -62,13 +73,10 @@ const ProductUI = () => {
                 style = {styles.checkOutBtn}
                 onPress ={() => handleCheckOut(navigation)}
             >
-                <Text style = {styles.checkOutBtnTxt}>
+                <Text testID="navi_btn" style = {styles.checkOutBtnTxt}>
                     To CheckOut
                 </Text>
             </TouchableOpacity>
-
-
-
         </View>
     )
 }
