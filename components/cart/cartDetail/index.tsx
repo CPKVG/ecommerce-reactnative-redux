@@ -5,9 +5,9 @@ import { increaseCartItem, reduceCartItem, removeCartItem } from "../../../redux
 import { RootState } from "../../../redux/rootReducer"
 import ProductImage from "../../product/productImage"
 
-const CartDetail = ({cartItems}:any) => {
+const CartDetail = () => {
     const cartSelector:any = useSelector((state: RootState) => state.cart)
-     
+     let cartItems = ""
     if(cartSelector !== undefined){
         cartItems = cartSelector.nextCartItem
     }
@@ -64,20 +64,20 @@ const CartDetail = ({cartItems}:any) => {
 
                     <View style = {styles.container}>
                         <View style = {styles.text_container}>
-                            <Text style = {styles.text} testID="title">
+                            <Text style = {styles.text}>
                                 {item[0].title}     
                             </Text>
                         </View>
 
                         <View style = {styles.price_container}>
-                            <Text style = {styles.pricetxt} testID="price">
+                            <Text style = {styles.pricetxt}>
                                 ${item[0].price} nzd
                             </Text>
                         </View>
 
                         <View style = {styles.scales_container}>
                             <BtnScales item = {"-"} onPress = {() => decrement(item)}/>
-                                <Text style = {styles.scales_text} testID="count">
+                                <Text style = {styles.scales_text}>
                                 {item[1].count}
                                 </Text>
                             <BtnScales item = {"+"} onPress = {() => increment(item)}/>
@@ -99,6 +99,7 @@ const CartDetail = ({cartItems}:any) => {
                     () => <View style={{ margin: 15 }}/>
                 }    
                 renderItem = {renderItem}
+                testID={'flat_list'}
             />
 
         {/* display shopping cart list here */}
