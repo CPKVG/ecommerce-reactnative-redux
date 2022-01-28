@@ -18,7 +18,6 @@ jest.useFakeTimers()
             </NavigationContainer>
         )
         test("btn event changes screen to checkout",()=>{
-            if (navigationRef.isReady()) {
             const { getByTestId,findByText } = render(component)
             const button = getByTestId('btn')
             
@@ -26,7 +25,6 @@ jest.useFakeTimers()
             const newScreen = findByText('Contact Information')
             expect(button).toBeTruthy
             expect(newScreen).toBeTruthy    
-            }
         })
 
         //Snapshot test

@@ -29,22 +29,6 @@ afterEach(cleanup)
 jest.useFakeTimers()
 describe("checkout detail component",()=>{
 
-    test("it should not allow numbers inputed",() => {
-        
-    })
-
-    test("it should return error/red hightlight if creds do not match",() => {
-         
-    })
-
-    test("it should highlight input green for valid inputs",()=>{
-
-    })
-
-    test("it should dispatch and return value via selector",()=>{
-        
-    })
-
     //snapshot test
     test("render input correctly on start", async() => {
         const tree = render(<CheckOutDetail/>).toJSON
