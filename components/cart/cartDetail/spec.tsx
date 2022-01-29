@@ -77,7 +77,7 @@ describe('testing chartDetail component',() => {
             cartItem
       }})
       fireEvent.press(getByTestId('flat_list'))
-
+    //   expect(component).toMatchSnapshot();
 
     //   expect(component.find(FlatList).at(0).props().data.length).to.equal(league.clubs.length);
     //   expect(toJson(component)).toMatchSnapshot();
