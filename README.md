@@ -1,3 +1,20 @@
+# React-Native Ecommerce App
+Simple display and select retail application. 
+
+#### Libaries mainly used
+    React-Native, TypeScript, Redux[thunk + persist], StackNavigation, RNsnap-carousel, Jest
+
+### Features 
+* Listing products by categories
+* Dynamic search filter, by productname,description, category or price 
+* Responsive category select + integrated with search function
+* Adding products into a shopping cart, 
+* Increase/decrease product quantity
+* Delete product item from cart
+* Payment processing information
+* Page navigation  
+
+##  How to run it
 
 Run ReactNative 
     `react-native run-android`
@@ -5,59 +22,77 @@ Run ReactNative
 Run json server 
     `json-server --watch db.json --port 3000`
 
-Json server trouble shoot
+Json server sometimes does not latch on properly
     `adb reverse tcp:3000 tcp:3000`
 
 Nuke gradlew
     ` cd android `
     `./gradlew clean`
 
-make sure its dead
+Clear cache
 `npm cache clean --force`
 
 
-Installation
+## Installation
     `https://reactnative.dev/docs/environment-setup`
-dependencies 
-    (if you want to install all dependancies)
-    `npm install`
-
-    `npm install -g json-server`
-    `npm i react-redux`
-    Redux
-    `npm i redux`
-    `npm i redux-thunk`
-    `npm install redux-persist`
-    React-Native-Navigator v6 `https://reactnavigation.org/docs/getting-started`
-    `npm i @react-navigation/native`
-    `npm install react-native-screens react-native-safe-area-context`
-    <!-- `npm install @react-navigation/stack` -->
-    `npm install @react-navigation/native-stack`
-     for testing 
-    <!-- 'npm i enzyme'
-    'npm i jest-enzyme'
-    'npm i @wojtekmaj/enzyme-adapter-react-17' -->
+### (Express Install) <br/>
+`npm install`
     
-    snap Carousel 
-    `npm install react-native-snap-carousel`
+### (Manual Install)
+
+Json-Mock-Server(as a substitute) <br/>
+`npm install -g json-server`
+    
+Redux
+```
+npm i react-redux
+npm i redux
+npm i redux-thunk
+npm i redux-persist
+```
+    
+React-Native-Navigator v6 `https://reactnavigation.org/docs/getting-started`
+```
+npm i @react-navigation/native
+npm i @react-navigation/stack
+npm i react-native-screens react-native-safe-area-context
+```
+ 
+Snap Carousel
+```
+npm install react-native-snap-carousel
+```
+    
+Testing
+```
+npm i jest
+npm i @testing-library/react-native 
+npm i redux-mock-store
+```
+    
+
+    
+## TODO
+### Front End
+- [X] Homepage category selection
+- [X] Carousel category
+- [X] Product add cart
+- [X] Product detail page -> page navigation
+- [X] Cart page
+### Testing 
+- [X] Testing(76% coverage) - Jest, react-test-renderer, redux-mock-store,
+### Back End
+- [ ] Restful API using nodejs/express
+- [ ] Backend Intergration, prob postgress/mysql
+- [ ] Payment intergration, prob Stripe
+### misc 
+- [ ] Code cleanup
 
 
-TO DO LIST
-    1) Homepage category selection (X)
-    2) Carousel category (X)
-    3) Product add cart (x)
-    4) product detail page -> page navigation (x)
-    5) Cart page (x)
-    6) Testing 
-
-Features 
-    1) Dynamic search filter
-    2) Responsive category select + integrated with search function
-    3) Page navigation
-    4) CheckOut page
-    5) Easy to configure backend
-
-
+<details>
+<summary>Testing Coverage Log</summary>
+    
+```
 -----------------------------------------------------------------|---------|----------|---------|---------|-------------------------
 File                                                             | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s       
 -----------------------------------------------------------------|---------|----------|---------|---------|-------------------------
@@ -135,3 +170,5 @@ Tests:       40 passed, 40 total
 Snapshots:   10 passed, 10 total
 Time:        13.656 s
 Ran all test suites.
+```
+</details>
