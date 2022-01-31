@@ -33,7 +33,6 @@ const CheckoutUI = () => {
 
     
     // validCheckoutInput = false
-    console.log(validCheckoutInput)
     return(
         validCheckoutInput ? 
             <View style = {styles.container}>            

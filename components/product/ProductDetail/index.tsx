@@ -8,7 +8,6 @@ import ProductImage from "../productImage"
 
 export const ProductDetail = () =>{
     const productSelector:any = useSelector((state: RootState) => state.product)
-    console.log(JSON.stringify(productSelector))
     let fetchProductDetail:any = ""
     if(productSelector !== undefined){
         fetchProductDetail = productSelector.productDetail
