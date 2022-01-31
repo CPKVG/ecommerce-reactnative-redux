@@ -86,7 +86,7 @@ export const fetchProductDetail = (item: any) => async (dispatch:any) =>{
 } 
 
 
-export const addProducts = (productData:string) =>({
-        type: productTypes.ADDPRODUCTS,
-        payload: productData
-    })
+// export const addProducts = (productData:string) =>({
+//         type: productTypes.ADDPRODUCTS,
+//         payload: productData
+//     })

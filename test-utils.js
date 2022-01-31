@@ -37,9 +37,9 @@ import { Provider } from 'react-redux';
 // import configureStore from 'redux-mock-store';
 import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
+import { rootReducer } from "./redux/rootReducer";
 
-
-const INITIAL_STATE = { count: 5 }; // Or use value from root reducer
+const INITIAL_STATE = { ...rootReducer }; // Or use value from root reducer
 const middlewares = [thunk]
 const mockStore = configureMockStore(middlewares)
 // const mockStore = configureStore([]);

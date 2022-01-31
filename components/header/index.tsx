@@ -19,8 +19,9 @@ const Header = (props: Props) => {
   const navigation = useNavigation<homeScreenProp>();
 
   const onPress = (navigation: homeScreenProp) =>{
+    if (navigationRef.isReady()) {
     navigation.navigate("Home") 
-
+    }
     //dispatch to reset search and category state
     dispatch(fetchProductSearch(undefined))
     dispatch(fetchCategory("")) 

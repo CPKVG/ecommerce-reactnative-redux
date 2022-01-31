@@ -7,33 +7,42 @@ import { RootStackParamList } from "../../../App"
 import { addProduct } from "../../../redux/Cart/cart.action"
 import { submitCart } from "../../../redux/Checkout/checkout.action"
 import { RootState } from "../../../redux/rootReducer"
+import { navigationRef } from "../../../RootNavigation"
 
 
 
 type PurchaseScreenProp = NativeStackNavigationProp<RootStackParamList, 'Purchase'>;
 
-const CheckoutUI = ({validCheckoutInput}:any) => {
+const CheckoutUI = () => {
     const navigation = useNavigation<PurchaseScreenProp>();
     const dispatch = useDispatch()
     
     const handleCheckOut = (navigation: PurchaseScreenProp) => {
-       navigation.navigate('Purchase')
+        if (navigationRef.isReady()) {
+            navigation.navigate('Purchase')
+        }
         // dispatch(submitCart())
     }
 
     const checkoutSelector:any = useSelector((state: RootState) => state.checkout)
-    validCheckoutInput = checkoutSelector.valid
+    let validCheckoutInput = true
+
+    if(checkoutSelector !== undefined){
+        validCheckoutInput = checkoutSelector.valid
+    }
+
     
     // validCheckoutInput = false
     console.log(validCheckoutInput)
     return(
         validCheckoutInput ? 
             <View style = {styles.container}>            
-                <TouchableOpacity testID = {"btn"}
+                <TouchableOpacity
                     style = {styles.Btn}
                     onPress ={() => handleCheckOut(navigation)}
+                    
                 >
-                    <Text style = {styles.btnTxt}>
+                    <Text style = {styles.btnTxt} testID="orderSubmitBtn">
                         Order Submit
                     </Text>
                 </TouchableOpacity>

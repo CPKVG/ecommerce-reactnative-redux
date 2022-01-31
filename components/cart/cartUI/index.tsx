@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { RootStackParamList } from "../../../App"
 import { addProduct } from "../../../redux/Cart/cart.action"
 import { RootState } from "../../../redux/rootReducer"
+import { navigationRef } from "../../../RootNavigation"
 
 
 
@@ -16,7 +17,9 @@ const CartUI = () => {
 
     const handleCheckOut = (navigation: cartScreenProp) => {
         //redirect to cart page
+        if (navigationRef.isReady()) {
         navigation.navigate('CheckOut')// checkout page not cart,
+        }
     }
 
     //fetching count status from actions

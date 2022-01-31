@@ -10,7 +10,7 @@ import { cleanup, fireEvent } from "@testing-library/react-native";
 import { Text, TouchableOpacity, View } from "react-native";
 import { navigationRef } from "../../../RootNavigation";
 import CheckOutDetail from "../checkoutDetail";
-import { shallow, mount } from 'enzyme';
+// import { shallow, mount } from 'enzyme';
 
 
 afterEach(cleanup)
@@ -18,70 +18,25 @@ jest.useFakeTimers()
 
 describe('testing checkout UI component',() => {
 
-    function mockInput(objData:any,result:Boolean){
-        if (navigationRef.isReady()) {
-            const sentHandler = jest.fn()
-            const { getByPlaceholderText } = render(<NavigationContainer><CheckOutDetail/></NavigationContainer>)
-            render(<NavigationContainer><CheckoutUI validCheckoutInput = {sentHandler}/></NavigationContainer>)
-         
-            Object.keys(objData).forEach((x:any) => {
-                return fireEvent.changeText(getByPlaceholderText(x),objData[x]);
-            });
-            expect(sentHandler).toBe(result)
-        }
-    }
+    const component = (
+        <NavigationContainer>
+            <CheckoutUI/>
+        </NavigationContainer>
+    )
 
-    test("it should return true if input is true",()=>{
-
-        let inputPlaceholder = [
-            {"Card number":"4987654321098769"},
-            {"CVC code":"100"},
-            {"Card holder name":"John Doe"},
-            {"Expire date":"0524"} ,
-            {"First name":"Joe"},
-            {"Last name":"Doe"},
-            {"City":"Wellington"},
-            {"Street Address":"Foo Street"},
-            {"PostCode":"0912"},
-            {"Email":"JoeMama@gmail.com"},
-            {"Phone":"1234567890"}
-        ]
-
-        mockInput(inputPlaceholder,true)
-    })
-
-    test("it should return true if input is false",() => {
-        const inputPlaceholder = [
-            {"Card number":"10101"},
-            {"CVC code":""},
-            {"Card holder name":"1!..2"},
-            {"Expire date":"may20th"} ,
-            {"First name":""},
-            {"Last name":""},
-            {"City":""},
-            {"Street Address":""},
-            {"PostCode":"0"},
-            {"Email":""},
-            {"Phone":""}
-        ]
-
-        mockInput(inputPlaceholder,false)
-    })
+  test('should render', () => { 
+    expect(component).not.toBe(null)
+  })
 
     test("btn event changes screen to purchase" ,()=>{
-        const component = (
-            <NavigationContainer>
-                <CheckoutUI/>
-            </NavigationContainer>
-        )
-            if (navigationRef.isReady()) {
-                const { getByTestId,findByText } = render(component)
-                const button = getByTestId('btn')
+        
+                const { findByText, getByText } = render(component)
+                const button = getByText('Order Submit')
                 
                 fireEvent.press(button)
                 const newScreen = findByText('Thank you for your purchase!')
+                expect(button).toBeTruthy
                 expect(newScreen).toBeTruthy                
-            }
     })
     it("renders the UI component",() => {
         const buttonText = "UI btn"
@@ -106,17 +61,6 @@ describe('testing checkout UI component',() => {
 
 //NAVIGATION HOOK TODO
 // const mockedDispatch = jest.fn();
-
-
-// jest.mock("@react-navigation/native",() => ({
-//     ...jest.requireActual("@react-navigation/native"),
-//     useNavigation:() => ({goback:jest.fn()}),
-//     useRoute:() =>({
-//         params:{
-//             Purchase:
-//         }
-//     })
-// }))
 
 // test("testing navigation route params",() =>{
 //     const navigation = {navigate:jest.fn()};

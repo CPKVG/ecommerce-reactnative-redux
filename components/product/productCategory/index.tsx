@@ -11,13 +11,14 @@ import  Carousel from 'react-native-snap-carousel';
 const Item = ({ item, onPress, backgroundColor, textColor }:any) => (
     <TouchableOpacity onPress={onPress} style={[backgroundColor]}>
 
-      <Text style={[styles.category, textColor]}>
+      <Text style={[styles.category, textColor]} testID = "categoryID">
           {item.category}
       </Text>
 
         <Image    
         style = {styles.image}
         source = {ProductImage(item.image)}
+        testID='imageID'
         />
     </TouchableOpacity>
   );
@@ -29,15 +30,19 @@ const Item = ({ item, onPress, backgroundColor, textColor }:any) => (
 //home page category selections
 const ProductCategory = () =>{
 
+   const productSelector:any = useSelector((state: RootState) => state.product)
 
-    
-    const productSelector:any = useSelector((state: RootState) => state.product)
+   let productData:any = ""
+   let productDataSearch:any = ""
+   let productCategorySelect:any = ""
 
+    //type gaurding
+    if(productSelector !== undefined){
+        productData = productSelector.productData
+        productDataSearch = productSelector.productDataSearch
+        productCategorySelect = productSelector.productCategorySelect
+    }
 
-
-    const productData = productSelector.productData
-    const productDataSearch = productSelector.productDataSearch
-    const productCategorySelect = productSelector.productCategorySelect
    //triggers when user selects a category 
    const dispatch = useDispatch();
 
@@ -89,7 +94,7 @@ const ProductCategory = () =>{
             autoplay={true}
             autoplayDelay={25000}
             autoplayInterval={2500}
-
+            testID='carousel'
             />
         </View>
     //     <View style={{ marginVertical: '5%' }}>

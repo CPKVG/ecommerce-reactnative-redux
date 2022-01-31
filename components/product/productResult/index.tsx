@@ -24,18 +24,21 @@ const ProductResult = () =>{
 
     //return value from redux actions    
     const productSelector:any = useSelector((state: RootState) => state.product)
-    let productDataSearch = productSelector.productDataSearch
+    let productDataSearch:any = ""
+    if(productSelector !== undefined){
+      productDataSearch = productSelector.productDataSearch
+    }
+
   
     const renderItem = ({item}:any) => {
     
       return(
-        //<ProductImage/>
         <TouchableOpacity onPress={ () => selectedProduct(item)} style={styles.container}>
           <Image 
             style = {styles.image}
             source = {ProductImage(item.image)}
           />
-          <Text style = {styles.title}>
+          <Text style = {styles.title} >
             {item.title}
           </Text>
           <Text style = {styles.price}>
@@ -55,6 +58,8 @@ const ProductResult = () =>{
           () => <View style={{ width: 16 }}/>
       }
       renderItem={renderItem}
+      // testID="flat-list"
+      // keyExtractor={item => item.id.toString()}
 
   />
 
