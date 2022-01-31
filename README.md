@@ -5,14 +5,30 @@ Simple display and select retail application.
     React-Native, TypeScript, Redux[thunk + persist], StackNavigation, RNsnap-carousel, Jest
 
 ### Features 
-* Listing products by categories
-* Dynamic search filter, by productname,description, category or price 
-* Responsive category select + integrated with search function
-* Adding products into a shopping cart, 
-* Increase/decrease product quantity
-* Delete product item from cart
-* Payment processing information
-* Page navigation  
+<details>
+* <summary>Listing products by categories</summary>
+    <img src = "https://github.com/CPKVG/ecommerce-reactnative-redux/blob/main/assests/readmeGIF/Snap-Carousel-Scroll.gif" alt="Snap-Carousel" width = "40%">
+</details>
+<details>
+* <summary>Dynamic search filter, by productname,description, category or price </summary>
+     <img src = "https://github.com/CPKVG/ecommerce-reactnative-redux/blob/main/assests/readmeGIF/Dynamic-search-filter.gif" alt="search filter" width = "40%">
+</details>
+<details>
+* <summary>Responsive category select + integrated with search function</summary>
+    <img src = "https://github.com/CPKVG/ecommerce-reactnative-redux/blob/main/assests/readmeGIF/Category-Select.gif" alt="Category Select example" width = "40%">
+</details>
+ <details>
+* <summary>Add/remove product from cart + increase/decrease quantity</summary>
+    <img src = "https://github.com/CPKVG/ecommerce-reactnative-redux/blob/main/assests/readmeGIF/Product-Quantity.gif" alt="Product Quantity" width = "40%">
+ </details>
+<details>
+* <summary>Payment processing information</summary>
+    <img src = "https://github.com/CPKVG/ecommerce-reactnative-redux/blob/main/assests/readmeGIF/Payment-Info.gif" alt="Payment Info" width = "40%">
+ </details>
+<details>
+* <summary>Page navigation</summary>
+    <img src = "https://github.com/CPKVG/ecommerce-reactnative-redux/blob/main/assests/readmeGIF/Page-Navi.gif" alt="Page Navigation" width = "40%">
+</details>
 
 ##  How to run it
 
