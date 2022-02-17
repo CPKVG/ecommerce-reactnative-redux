@@ -1,0 +1,262 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing chartDetail component ui renders should render the shopping cart display(in cartDetails) 1`] = `
+<View>
+  <Text>
+    Shopping Cart
+  </Text>
+  <RCTScrollView
+    ItemSeparatorComponent={[Function]}
+    data={
+      Array [
+        Object {
+          "category": "Electronics",
+          "description": "Graphics card",
+          "id": "2",
+          "image": "RTX3080",
+          "price": "1900.99",
+          "stock": "0",
+          "title": "RTX 3080",
+        },
+        Object {
+          "count": "1",
+        },
+      ]
+    }
+    getItem={[Function]}
+    getItemCount={[Function]}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={Array []}
+    viewabilityConfigCallbackPairs={Array []}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View>
+          <View>
+            <View>
+              <Image
+                source={
+                  Object {
+                    "testUri": "../../../assests/img/RTX3080.png",
+                  }
+                }
+              />
+            </View>
+            <View>
+              <View
+                accessible={true}
+                collapsable={false}
+                focusable={false}
+                nativeID="animatedComponent"
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+              >
+                <Text>
+                  Delete
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View>
+            <View>
+              <Text>
+                RTX 3080
+              </Text>
+            </View>
+            <View>
+              <Text
+                testID="price"
+              >
+                $
+                1900.99
+                 nzd
+              </Text>
+            </View>
+            <View>
+              <View>
+                <View
+                  accessible={true}
+                  collapsable={false}
+                  focusable={false}
+                  nativeID="animatedComponent"
+                  onClick={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "opacity": 1,
+                    }
+                  }
+                >
+                  <Text>
+                    -
+                  </Text>
+                </View>
+              </View>
+              <Text
+                testID="count"
+              />
+              <View>
+                <View
+                  accessible={true}
+                  collapsable={false}
+                  focusable={false}
+                  nativeID="animatedComponent"
+                  onClick={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "opacity": 1,
+                    }
+                  }
+                >
+                  <Text>
+                    +
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View />
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View>
+          <View>
+            <View>
+              <Image />
+            </View>
+            <View>
+              <View
+                accessible={true}
+                collapsable={false}
+                focusable={false}
+                nativeID="animatedComponent"
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+              >
+                <Text>
+                  Delete
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View>
+            <View>
+              <Text />
+            </View>
+            <View>
+              <Text
+                testID="price"
+              >
+                $
+                 nzd
+              </Text>
+            </View>
+            <View>
+              <View>
+                <View
+                  accessible={true}
+                  collapsable={false}
+                  focusable={false}
+                  nativeID="animatedComponent"
+                  onClick={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "opacity": 1,
+                    }
+                  }
+                >
+                  <Text>
+                    -
+                  </Text>
+                </View>
+              </View>
+              <Text
+                testID="count"
+              >
+                1
+              </Text>
+              <View>
+                <View
+                  accessible={true}
+                  collapsable={false}
+                  focusable={false}
+                  nativeID="animatedComponent"
+                  onClick={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "opacity": 1,
+                    }
+                  }
+                >
+                  <Text>
+                    +
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

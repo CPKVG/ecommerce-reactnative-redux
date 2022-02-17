@@ -1,0 +1,68 @@
+
+{
+  "data":[
+          {"id":"0",
+            "title":"White T-shirt",
+            "price":"5.99",
+            "description":"Keeps you warm",
+            "stock":"10",
+            "image":"White_t-shirt",
+            "category":"Apparel"
+          },{
+            "id":"1",
+            "title":"Black T-shirt",
+            "price":"4.99",
+            "description":"Keeps you warm",
+            "stock":"5",
+            "image":"Black_t-shirt",
+            "category":"Apparel"
+          },{
+            "id":"2",
+            "title":"RTX 3080",
+            "price":"1900.99",
+            "description":"Graphics card",
+            "stock":"0",
+            "image":"RTX3080",
+            "category":"Electronics"
+          },{
+            "id":"3",
+            "title":"laptop",
+            "price":"560.99",
+            "description":"Portable personal computer",
+            "stock":"10",
+            "image":"Laptop",
+            "category":"Electronics"
+          },{
+            "id":"4",
+            "title":"Potatoes",
+            "price":"3.99",
+            "description":"",
+            "stock":"25",
+            "image":"Potatos",
+            "category":"Food"
+          },{
+            "id":"5",
+            "title":"Can of Beans",
+            "price":"1.99",
+            "description":"Beans trapped in a tin can",
+            "stock":"20",
+            "image":"Watties_Beanz",
+            "category":"Food"
+          },{
+            "id":"6",
+            "title":"T-34",
+            "price":"460,000",
+            "description":"Soviet Main battle tank during WW2",
+            "stock":"8000",
+            "image":"T34-85",
+            "category":"Soviet Tanks"
+          },{
+            "id":"7",
+            "title":"KV2",
+            "price":"???",
+            "description":"Soviet Heavy tank during WW2",
+            "stock":"210",
+            "image":"Kv1",
+            "category":"Soviet Tanks"       
+          }]
+}
