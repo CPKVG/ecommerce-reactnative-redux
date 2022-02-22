@@ -38,6 +38,10 @@ import CartUI from './components/cart/cartUI';
 import ProductUI from './components/product/productUI';
 import CheckoutUI from './components/checkout/checkoutUI';
 import PurchasePage from './pages/purchasepage';
+import SignIn from './components/auth/signIn';
+import SignUp from './components/auth/signUp';
+import SignOut from './components/auth/signOut';
+import Auth from './components/auth';
 
 
 //const Home = () => <Text >Home</Text>;
@@ -49,6 +53,9 @@ export type RootStackParamList = {
   Cart:undefined;
   CheckOut:undefined;
   Purchase:undefined;
+  SignIn:undefined;
+  SignUp:undefined;
+  LogOut:undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -57,6 +64,7 @@ export const HomeScreen = () => {
   
   return(
     <HomePageLayout>
+      {/* <Search/> */}
       <HomePage/>
     </HomePageLayout>
   )
@@ -75,7 +83,7 @@ export const CartScreen = () =>{
   return(
     <ProductPageLayout>
       <CartPage/>
-      <CartUI/>
+      
     </ProductPageLayout>
   )
 }
@@ -95,7 +103,23 @@ export const PurchaseScreen = () => {
   )
 }
 
+
+// export const AuthHeaderScreen = () => {
+//   return(
+//     <View>
+//       {/* <SignUp/>  */}
+//       <SignIn/>
+//     </View>
+//   )
+// }
+
+
+
+
 const App = () => {
+
+  // const isLoggedIn = false
+  // const isRouteHome = false
 
   return(
     //<View>
@@ -103,21 +127,20 @@ const App = () => {
     
     <NavigationContainer ref={navigationRef}>
       
-      <Stack.Navigator
-        // screenOptions={{
-        //   //headerShown: false
-        //   // header:() => (
-        //   //   <Search/>
-        //   // )
-        // }}>
-
+      <Stack.Navigator  
+        screenOptions={{
+          header:({route}) => (
+            <>
+            {/* {isLoggedIn ? <SignOut/> : <><SignUp/><SignIn/></>} */}
+            <Auth/>
+            {route.name == "Home" ? <Search/> : null}
+            <Header title = {"FooCommerce"}/>
+            </>
+          )
+        }}
         >
-        <Stack.Screen name="Home" component={HomeScreen} 
-          options= {{
-            header:() => (
-              <Search/>
-            )
-          }}
+
+        <Stack.Screen name="Home" component={HomeScreen}
         />
         <Stack.Screen name="Product" component={ProductScreen}
         />

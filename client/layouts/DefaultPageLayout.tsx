@@ -5,7 +5,7 @@ const DefaultPageLayout = (props:any) => {
 
     return(
         <>
-        <Header title = {"FooCommerce"}/>
+        {/* <Header title = {"FooCommerce"}/> */}
         {props.children}
         </>
     )

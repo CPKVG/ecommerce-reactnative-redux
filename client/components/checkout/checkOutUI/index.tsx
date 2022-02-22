@@ -13,7 +13,7 @@ import { navigationRef } from "../../../RootNavigation"
 
 type PurchaseScreenProp = NativeStackNavigationProp<RootStackParamList, 'Purchase'>;
 
-const CheckoutUI = () => {
+const CheckOutUI = () => {
     const navigation = useNavigation<PurchaseScreenProp>();
     const dispatch = useDispatch()
     
@@ -79,4 +79,4 @@ const styles = StyleSheet.create({
     }
 
 })
-export default CheckoutUI
+export default CheckOutUI

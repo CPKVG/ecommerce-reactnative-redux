@@ -59,11 +59,12 @@ const ProductCategory = () =>{
     }, [])
 
 
-    let data:Array<String> = []
+    let data:Array<String> = [] 
     //filters category and first image of that category
-    if(productData !== undefined && productData !== ""){
+    if(productData instanceof Array){
+        // console.log(productData)
         data = productData.filter((val:any,id:number) => id == productData.findIndex((elem:any)=> elem.category == val.category))
-    }
+    }  
 
     const renderItem = ({item,backgroundColor,color}:any)=>{
 

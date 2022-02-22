@@ -41,7 +41,7 @@ export const ProductDetail = () =>{
 
 const styles = StyleSheet.create({
     container: {    
-
+        
         // alignItems:"center"
     },
     title_container:{

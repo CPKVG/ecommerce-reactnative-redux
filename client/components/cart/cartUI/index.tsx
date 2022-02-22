@@ -41,7 +41,8 @@ const CartUI = () => {
 const styles = StyleSheet.create({
     container:{
         //keep the container at the bottom
-        position: 'absolute', left: 0, right: 0, bottom: 0,
+        // position: 'absolute', left: 0, right: 0, bottom: 0,
+        // ...StyleSheet.absoluteFillObject,
         //align items in row
         // flexDirection:"row",
         // alignContent:"stretch",
@@ -49,7 +50,7 @@ const styles = StyleSheet.create({
         padding:10,
         marginTop:6,
         marginBottom:6,
-
+        
 
     },
     Btn:{

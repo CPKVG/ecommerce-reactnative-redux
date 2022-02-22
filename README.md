@@ -95,11 +95,12 @@ npm i redux-mock-store
 - [X] Product add cart
 - [X] Product detail page -> page navigation
 - [X] Cart page
+- [] signIn, signUp & password reset
 ### Testing 
 - [X] Testing(76% coverage) - Jest, react-test-renderer, redux-mock-store,
 ### Back End
 - [ ] Restful API using nodejs/express
-- [ ] Backend Intergration, prob postgress/mysql
+- [ ] Backend Intergration, using mongodb atlas
 - [ ] Payment intergration, prob Stripe
 ### misc 
 - [ ] Code cleanup

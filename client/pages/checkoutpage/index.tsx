@@ -1,11 +1,11 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import CheckoutDetail from '../../components/checkout/checkoutDetail';
+import CheckOutDetail from '../../components/checkout/checkOutDetail';
 
 const CheckoutPage = () => {
     return(
         <View>
-            <CheckoutDetail/>
+            <CheckOutDetail/>
         </View>
     )
 }

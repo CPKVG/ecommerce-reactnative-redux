@@ -9,7 +9,7 @@ const HomePageLayout = (props:any) => {
     return(
         <>
         {/* <Search/> */}
-        <Header title = {"FooCommerce"}/>
+        {/* <Header title = {"FooCommerce"}/> */}
         {props.children}
         </>
     )

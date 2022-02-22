@@ -5,7 +5,7 @@ import Header from '../components/header';
 const ProductPageLayout = (props:any) =>{
     return(
         <>
-        <Header title = {"FooCommerce"}/>
+        {/* <Header title = {"FooCommerce"}/> */}
         {props.children}
         {/* {<Footer/>} */}
         </>

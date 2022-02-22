@@ -5,7 +5,7 @@ import * as RootNavigation from "../../RootNavigation";
 export const fetchProduct = () => async (dispatch:any) => {
     const reponse = await fetch(`http://localhost:3000/data`);
     let productData = await reponse.json();
-
+    
 
     try {
         dispatch({

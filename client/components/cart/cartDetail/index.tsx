@@ -1,22 +1,24 @@
 import React from "react"
-import { FlatList, Image, StyleSheet, Text, TouchableOpacity, View } from "react-native"
+import { FlatList, Image, StyleSheet, Text, TouchableOpacity, View, VirtualizedList } from "react-native"
 import { useDispatch, useSelector } from "react-redux"
 import { increaseCartItem, reduceCartItem, removeCartItem } from "../../../redux/Cart/cart.action"
 import { RootState } from "../../../redux/rootReducer"
 import ProductImage from "../../product/productImage"
 
 const CartDetail = () => {
-    const cartSelector:any = useSelector((state: RootState) => state.cart)
-     let cartItems:any = ""
+    const cartSelector = useSelector((state: RootState) => state.cart)
+
+     let cartItems:null | String = ""
     if(cartSelector !== undefined){
         cartItems = cartSelector.nextCartItem
+        console.log(cartItems)
     }
 
     
     // console.log(cartItems)
     const dispatch = useDispatch()
-
-    const increment = (item:any) => {
+    
+    const increment = (item:Array<Object>) => {
         //increase count of item by 1
         dispatch(increaseCartItem(item))
     }
@@ -41,7 +43,7 @@ const CartDetail = () => {
 
 
     const renderItem = ({item, index}:any) => {
-
+        console.log(item)
         return(
 
             <View style={{backgroundColor: index % 2 === 0 ? "" : '#ffffff' }} >
@@ -110,8 +112,8 @@ const CartDetail = () => {
 const styles = StyleSheet.create({
     container:{
         marginTop:10,
-        padding:4,  
-        
+        padding:4,
+        marginBottom:60,
     },
     header:{
         fontSize:26,
