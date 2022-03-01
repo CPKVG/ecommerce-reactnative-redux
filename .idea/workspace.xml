@@ -5,20 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e71c5607-4e68-468b-8f80-85f303bc11bb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/client/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/checkout/checkOutUI/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/checkout/checkOutUI/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/product/productCategory/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/product/productCategory/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/layouts/CheckoutPageLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/layouts/CheckoutPageLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/checkoutpage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/checkoutpage/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/redux/Product/product.action.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/redux/Product/product.action.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/server/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/model/auth.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/model/auth.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/cart.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/cart.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/cart/cartDetail/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/cart/cartDetail/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

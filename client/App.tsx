@@ -55,7 +55,7 @@ export type RootStackParamList = {
   Purchase:undefined;
   SignIn:undefined;
   SignUp:undefined;
-  LogOut:undefined;
+  SignOut:undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -102,6 +102,18 @@ export const PurchaseScreen = () => {
     <PurchasePage/>
   )
 }
+export const SignInScreen = () => {
+  return(
+    <SignIn/>
+  )
+}
+
+export const SignUpScreen = () => {
+  return(
+    <SignUp/>
+  )
+}
+
 
 
 // export const AuthHeaderScreen = () => {
@@ -149,6 +161,12 @@ const App = () => {
         <Stack.Screen name="CheckOut" component={CheckOutScreen}
         />
         <Stack.Screen name="Purchase" component={PurchaseScreen}
+        />
+
+        <Stack.Screen name="SignIn" component={SignInScreen}
+        />
+
+        <Stack.Screen name="SignUp" component={SignUpScreen}
         />
 
       </Stack.Navigator>

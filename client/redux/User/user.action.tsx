@@ -1,3 +1,4 @@
+import Axios from 'axios';
 import userTypes from './user.types';
 
 export const setCurrentUser = (user: any) => ({
@@ -11,18 +12,20 @@ export const resetAllAuthForms = () => {
 
 
 export const signInUser = ({email,password}:{[key:string]:string}) => async (dispatch: any) => {
-    try{
-    // fetch backend from here 
-    dispatch({
-        type:userTypes.SIGN_IN_SUCCESS,
-        payload:true
-    })
+  Axios.post("http://10.0.2.2:3001/createUser",{email:email,password:password}).then((response: any)=>{
+    try{    
+      dispatch({
+          type:userTypes.SIGN_IN_SUCCESS,
+          payload:true
+      })
     }catch(err){
         //console.log(err)
     }
+  })
 }
 
 export const signUpUser = ({ email, password, confirmPassword }:{[key:string]:string}) => async (dispatch:any) => {
+
     if (password !== confirmPassword) {
       const err = ['Password Don\'t match'];
       dispatch({
@@ -32,14 +35,13 @@ export const signUpUser = ({ email, password, confirmPassword }:{[key:string]:st
       return;
     }
     try {
-        const { user }:any = "" 
-            // await get res
-    
-        dispatch({
-          type: userTypes.SIGN_UP_SUCCESS,
-          payload: true
-        });
-    
+      //calling localhost in android simulator created with AVD returns network error
+          Axios.post("http://10.0.2.2:3001/createUser",{email:email,password:password}).then((response: any)=>{
+              dispatch({
+                type: userTypes.SIGN_UP_SUCCESS,
+                payload: true
+              });              
+            })    
       } catch (err) {
         // console.log(err);
       }

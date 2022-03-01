@@ -1,5 +1,5 @@
 import React from "react"
-import { FlatList, Image, StyleSheet, Text, TouchableOpacity, View, VirtualizedList } from "react-native"
+import { FlatList, Image, ListRenderItemInfo, StyleSheet, Text, TouchableOpacity, View, VirtualizedList } from "react-native"
 import { useDispatch, useSelector } from "react-redux"
 import { increaseCartItem, reduceCartItem, removeCartItem } from "../../../redux/Cart/cart.action"
 import { RootState } from "../../../redux/rootReducer"
@@ -8,7 +8,7 @@ import ProductImage from "../../product/productImage"
 const CartDetail = () => {
     const cartSelector = useSelector((state: RootState) => state.cart)
 
-     let cartItems:null | String = ""
+     let cartItems:any
     if(cartSelector !== undefined){
         cartItems = cartSelector.nextCartItem
         console.log(cartItems)
@@ -23,11 +23,11 @@ const CartDetail = () => {
         dispatch(increaseCartItem(item))
     }
 
-    const decrement = (item:any) => {
+    const decrement = (item:Array<Object>) => {
         dispatch(reduceCartItem(item))
         
     }
-    const deleteBtn = (item:any) =>{
+    const deleteBtn = (item:Array<Object>) =>{
         dispatch(removeCartItem(item))
     }
 

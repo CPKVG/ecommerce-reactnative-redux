@@ -1,22 +1,50 @@
+import { useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import React, { useState } from "react"
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { useDispatch } from "react-redux"
+import { RootStackParamList } from "../../App";
+import { navigationRef } from "../../RootNavigation";
 
+type SignInScreenProp = NativeStackNavigationProp<RootStackParamList, 'SignIn'>;
+type SignUpScreenProp = NativeStackNavigationProp<RootStackParamList, 'SignUp'>;
 
 const Auth = () => {
+    // const dispatch = useDispatch();
+    const navigationSignIn = useNavigation<SignInScreenProp>();
+    // const route = useRoute()
+    const navigationSignUp = useNavigation<SignUpScreenProp>();
+
+    const handleSignInRoute = () =>{
+        if (navigationRef.isReady()) {
+            navigationSignIn.navigate('SignIn')// checkout page not cart,
+        }
+        // console.log(route)
+    }
+
+    const handleSignUpRoute = () => {
+        if (navigationRef.isReady()) {
+            navigationSignUp.navigate('SignUp')
+        }
+    }
 
     return(
         <View style = {styles.container}>
             <View style = {styles.btn_container}>
-            <TouchableOpacity style = {styles.signIn_btn}>
+                <TouchableOpacity 
+                style = {styles.signIn_btn}
+                onPress ={() => handleSignInRoute()}>
                 <Text style = {styles.btn_txt}>SignIn</Text>
-            </TouchableOpacity>
+                </TouchableOpacity>
             </View>
 
             <View style = {styles.btn_container}>
-            <TouchableOpacity style = {styles.SignUp_btn}>
-                <Text style = {styles.btn_txt}>SignUp</Text>
-            </TouchableOpacity>
+                <TouchableOpacity 
+                style = {styles.SignUp_btn}
+                onPress ={() => handleSignUpRoute()}>
+                <Text style = {styles.btn_txt}
+                >SignUp</Text>
+                </TouchableOpacity>
             </View>
 
         </View>

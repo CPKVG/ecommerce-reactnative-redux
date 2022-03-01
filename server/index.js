@@ -5,7 +5,7 @@ const API_KEY = require('./config/mongo_config');
 const UserModel = require("./model/auth.model");
 
 const cors = require("cors")
-
+const bcrypt = require("bcrypt")
 
 
 mongoose.connect(API_KEY);
@@ -24,12 +24,16 @@ app.get("/getUsers",(req,res)=>{
 })
 
 app.post("/createUser", async(req,res)=>{
-    const user = req.body
-    const newUser = new UserModel(user);
-    await newUser.save();
+    try{
+        const hashedPassword = await bcrypt.hash(req.body.password,10)
+        const user = {email:req.body.email, password : hashedPassword}
+        const newUser = new UserModel(user);
+        await newUser.save();
+        res.json(user)
 
-    res.json(user)
-
+    }catch{
+        res.status(500).send()
+    } 
 })
 
 
